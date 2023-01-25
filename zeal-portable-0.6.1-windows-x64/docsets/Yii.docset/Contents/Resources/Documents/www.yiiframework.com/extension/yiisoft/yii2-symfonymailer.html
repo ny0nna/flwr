@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<!-- Mirrored from www.yiiframework.com/extension/yiisoft/yii2-symfonymailer by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 07 Dec 2022 14:51:06 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+        <link rel="apple-touch-icon" sizes="180x180" href="../../favico/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../../favico/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../../favico/favicon-16x16.png">
+        <link rel="icon" type="image/svg+xml" href="../../favico/favicon.svg">
+        <link rel="icon" type="image/png" href="../../favico/favicon.png">
+        <link rel="shortcut icon" href="../../favico/favicon.ico">
+        <link rel="manifest" href="../../favico/manifest.json">
+        <link rel="mask-icon" href="../../favico/safari-pinned-tab.svg" color="#1e6887">
+        <meta name="msapplication-config" content="https://www.yiiframework.com/favico/browserconfig.xml">
+        <meta name="theme-color" content="#1e6887">
+
+        <link href="https://www.yiiframework.com/rss.xml" type="application/rss+xml" rel="alternate" title="Lives News for Yii Framework">
+
+        <meta name="csrf-param" content="_csrf">
+<meta name="csrf-token" content="6Cm7LwD6oE1oVN4-6L_lcgWKWJo9-xErvnsQZkk33IiKWo9gWcLMfSAwtWG5yJ06Q90241aIdEbnMHgQcHWtww==">
+        
+        <title>yiisoft/yii2-symfonymailer | Extensions | Yii PHP Framework</title>
+
+        <meta property="og:site_name" content="Yii Framework" />
+        <meta property="og:title" content="yiisoft/yii2-symfonymailer" />
+        <meta property="og:image" content="../../image/facebook_cover.png" />
+        <meta property="og:url" content="/extension/yiisoft/yii2-symfonymailer" />
+        <meta property="og:description" content="" />
+
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:site" content="yiiframework" />
+        <meta name="twitter:title" content="yiisoft/yii2-symfonymailer" />
+        <meta name="twitter:description" content="" />
+        <meta name="twitter:image" content="../../image/twitter_cover.png" />
+        <meta name="twitter:image:width" content="120" />
+        <meta name="twitter:image:height" content="120" />
+
+        <link type="application/opensearchdescription+xml" href="https://www.yiiframework.com/opensearch.xml" title="Yii Search" rel="search">
+<link href="../../assets/84e61ab0/css/all.mina079.css?v=1664835330" rel="stylesheet">
+<script>yiiBaseUrl = ""</script>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-707ZP35KCT"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-707ZP35KCT');
+</script>
+    </head>
+    <body data-spy="scroll" data-target="#scrollnav" data-offset="1">
+        
+        <div id="page-wrapper" class="">
+
+            <header class="navbar navbar-inverse navbar-static" id="top">
+    <div class="container">
+        <div id="main-nav-head" class="navbar-header">
+            <a href="https://www.yiiframework.com/" class="navbar-brand">
+                <img src="../../image/logo.svg"
+                     alt="Yii PHP Framework"
+                     width="165" height="35"/>
+            </a>
+            <button type="button" class="navbar-toggle" data-toggle="collapse" aria-label="Toggle navigation" data-target=".navbar-collapse"><i
+                    class="fa fa-inverse fa-bars"></i></button>
+        </div>
+
+        <div class="navbar-collapse collapse navbar-right">
+            <ul id="main-nav" class="nav navbar-nav navbar-main-menu nav"><li title="The Definitive Guide to Yii"><a href="../../doc/guide/2.0/en.html">Guide</a></li>
+<li title="API Documentation"><a href="../../doc/api/2.html">API</a></li>
+<li title="Community Wiki"><a href="https://www.yiiframework.com/wiki">Wiki</a></li>
+<li title="Community Forum"><a href="https://www.yiiframework.com/forum">Forum</a></li>
+<li class="dropdown active"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Community <span class="caret"></span></a><ul id="w1" class="dropdown-menu"><li><a href="https://www.yiiframework.com/chat" tabindex="-1">Live Chat</a></li>
+<li class="active" title="Extensions"><a href="https://www.yiiframework.com/extensions" tabindex="-1">Extensions</a></li>
+<li><a href="https://www.yiiframework.com/community" tabindex="-1">Resources</a></li>
+<li title="Community Members"><a href="https://www.yiiframework.com/user" tabindex="-1">Members</a></li>
+<li title="Community Hall of Fame"><a href="https://www.yiiframework.com/user/halloffame" tabindex="-1">Hall of Fame</a></li>
+<li title="Community Badges"><a href="https://www.yiiframework.com/badges" tabindex="-1">Badges</a></li></ul></li>
+<li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">More <span class="caret"></span></a><ul id="w2" class="dropdown-menu"><li class="separator dropdown-header">Learn</li>
+<li><a href="https://www.yiiframework.com/books" tabindex="-1">Books</a></li>
+<li><a href="https://www.yiiframework.com/resources" tabindex="-1">Resources</a></li>
+<li class="separator dropdown-header">Develop</li>
+<li><a href="https://www.yiiframework.com/download" tabindex="-1">Download Yii</a></li>
+<li><a href="https://www.yiiframework.com/report-issue" tabindex="-1">Report an Issue</a></li>
+<li><a href="https://www.yiiframework.com/security" tabindex="-1">Report a Security Issue</a></li>
+<li><a href="https://www.yiiframework.com/contribute" tabindex="-1">Contribute to Yii</a></li>
+<li><a href="https://www.yiiframework.com/donate" tabindex="-1">Donate</a></li>
+<li class="separator dropdown-header">About</li>
+<li><a href="../../doc/guide/2.0/en/intro-yii.html" tabindex="-1">What is Yii?</a></li>
+<li><a href="https://www.yiiframework.com/release-cycle" tabindex="-1">Release Cycle</a></li>
+<li><a href="https://www.yiiframework.com/news" tabindex="-1">News</a></li>
+<li><a href="https://www.yiiframework.com/license" tabindex="-1">License</a></li>
+<li><a href="https://www.yiiframework.com/team" tabindex="-1">Team</a></li>
+<li><a href="https://www.yiiframework.com/logo" tabindex="-1">Official Logos and Design</a></li></ul></li></ul>
+            
+            <div class="nav navbar-nav navbar-right">
+                <ul id="login-nav" class="nav navbar-nav navbar-main-menu nav"><li><a href="https://www.yiiframework.com/login">Login</a></li></ul>            </div>
+
+            <div class="nav navbar-nav navbar-right">
+                        <form id="search-form" class="navbar-form" action="https://www.yiiframework.com/search" method="get">
+<input type="hidden" name="type" value="extension">        <div class="form-group nospace">
+            <div class="input-group">
+                <input type="text" class="form-control" id="search" name="q" placeholder="Search Extensions&hellip;" autocomplete="off" value="">
+            </div>
+        </div>
+        <div id="search-resultbox"></div>
+        </form>            </div>
+
+            
+        </div>
+    </div>
+</header>
+
+            <div class="section-header-wrap">
+    <div class="container section-header lang-en">
+        <div class="row headline-row">
+            <div class="col-xs-12 col-md-12">
+                <div class="section-headline">Yii Framework Extensions</div>
+            </div>
+                    </div>
+            </div>
+</div>
+
+                        <div class="container guide-view lang-en">
+    <div class="row">
+        <div class="col-sm-3 col-md-2 col-lg-2">
+            <a class="btn btn-block btn-new-extension" href="https://www.yiiframework.com/extensions/create"><span class="big">Create</span><span class="small">new extension</span></a>
+
+
+<h3 class="extension-side-title">Categories</h3>
+
+<ul class="extension-side-menu">
+    <li><a href="https://www.yiiframework.com/extensions">All</a></li>
+            <li>
+            <a href="https://www.yiiframework.com/extensions?category=1&amp;version=2.0">Auth <span class="count">102</span></a>
+        </li>
+            <li>
+            <a href="https://www.yiiframework.com/extensions?category=2&amp;version=2.0">Caching <span class="count">40</span></a>
+        </li>
+            <li>
+            <a href="https://www.yiiframework.com/extensions?category=3&amp;version=2.0">Console <span class="count">41</span></a>
+        </li>
+            <li>
+            <a href="https://www.yiiframework.com/extensions?category=4&amp;version=2.0">Database <span class="count">246</span></a>
+        </li>
+            <li>
+            <a href="https://www.yiiframework.com/extensions?category=5&amp;version=2.0">Date and Time <span class="count">58</span></a>
+        </li>
+            <li>
+            <a href="https://www.yiiframework.com/extensions?category=6&amp;version=2.0">Error Handling <span class="count">12</span></a>
+        </li>
+            <li>
+            <a href="https://www.yiiframework.com/extensions?category=7&amp;version=2.0">File System <span class="count">67</span></a>
+        </li>
+            <li>
+            <a href="https://www.yiiframework.com/extensions?category=8&amp;version=2.0">Logging <span class="count">79</span></a>
+        </li>
+            <li class="active">
+            <a href="https://www.yiiframework.com/extensions?category=9&amp;version=2.0">Mail <span class="count">63</span></a>
+        </li>
+            <li>
+            <a href="https://www.yiiframework.com/extensions?category=10&amp;version=2.0">Networking <span class="count">58</span></a>
+        </li>
+            <li>
+            <a href="https://www.yiiframework.com/extensions?category=11&amp;version=2.0">Security <span class="count">46</span></a>
+        </li>
+            <li>
+            <a href="https://www.yiiframework.com/extensions?category=12&amp;version=2.0">Validation <span class="count">119</span></a>
+        </li>
+            <li>
+            <a href="https://www.yiiframework.com/extensions?category=13&amp;version=2.0">Web Service <span class="count">252</span></a>
+        </li>
+            <li>
+            <a href="https://www.yiiframework.com/extensions?category=14&amp;version=2.0">Others <span class="count">677</span></a>
+        </li>
+            <li>
+            <a href="https://www.yiiframework.com/extensions?category=15&amp;version=2.0">User Interface <span class="count">1064</span></a>
+        </li>
+            <li>
+            <a href="https://www.yiiframework.com/extensions?category=17&amp;version=2.0">Application Template <span class="count">39</span></a>
+        </li>
+    </ul>
+
+<h3 class="extension-side-title">Popular Tags</h3>
+
+<ul class="extension-side-menu last-side-menu">
+    <li class="active"><a href="https://www.yiiframework.com/extensions?category=9">All</a></li>
+            <li>
+            <a href="https://www.yiiframework.com/extensions?tag=yii2&amp;category=9&amp;version=2.0">yii2 <span class="count">410</span></a>
+        </li>
+            <li>
+            <a href="https://www.yiiframework.com/extensions?tag=widget&amp;category=9&amp;version=2.0">widget <span class="count">338</span></a>
+        </li>
+            <li>
+            <a href="https://www.yiiframework.com/extensions?tag=jquery&amp;category=9&amp;version=2.0">jquery <span class="count">154</span></a>
+        </li>
+            <li>
+            <a href="https://www.yiiframework.com/extensions?tag=user-interface&amp;category=9&amp;version=2.0">user interface <span class="count">133</span></a>
+        </li>
+            <li>
+            <a href="https://www.yiiframework.com/extensions?tag=extension&amp;category=9&amp;version=2.0">extension <span class="count">119</span></a>
+        </li>
+            <li>
+            <a href="https://www.yiiframework.com/extensions?tag=behavior&amp;category=9&amp;version=2.0">behavior <span class="count">107</span></a>
+        </li>
+            <li>
+            <a href="https://www.yiiframework.com/extensions?tag=database&amp;category=9&amp;version=2.0">database <span class="count">100</span></a>
+        </li>
+            <li>
+            <a href="https://www.yiiframework.com/extensions?tag=bootstrap&amp;category=9&amp;version=2.0">bootstrap <span class="count">97</span></a>
+        </li>
+            <li>
+            <a href="https://www.yiiframework.com/extensions?tag=activerecord&amp;category=9&amp;version=2.0">activerecord <span class="count">83</span></a>
+        </li>
+            <li>
+            <a href="https://www.yiiframework.com/extensions?tag=ajax&amp;category=9&amp;version=2.0">ajax <span class="count">75</span></a>
+        </li>
+    </ul>
+
+
+        </div>
+
+        <div class="col-sm-9 col-md-10 col-lg-10" role="main">
+
+            
+            <div class="row">
+                <div class="col-md-12 col-lg-9">
+                    <div class="content extension-row">
+                        <h2 class="title">
+                            yiisoft/yii2-symfonymailer                            <small>
+                                The SymfonyMailer integration for the Yii framework                                                            </small>
+                        </h2>
+                        <div class="text">
+                            <div class="markdown"><p align="center">
+    <a href="https://github.com/yiisoft">
+        <img src="../../../user-content.yiiframework.com/img/LDnXGRqb00nJKR-NE7zH1g/https/yiisoft.github.io/docs/images/yii_logo.svg" height="100" alt="yii_logo.svg" />
+    </a>
+    </p><h3 align="center">Yii Mailer Library - Symfony Mailer Extension</h3>
+<ol><li><a href="#installation">Installation</a></li>
+<li><a href="#usage">Usage</a></li>
+<li><a href="#migrating-from-yiisoftyii2-swiftmailer">Migrating from yiisoft/yii2-swiftmailer</a></li></ol>
+
+    <br />
+
+<p>This extension provides a <a href="https://symfony.com/doc/5.4/mailer.html">Symfony Mailer</a> mail solution for <a href="http://www.yiiframework.com/">Yii framework 2.0</a>.</p>
+<p>For license information check the <a href="https://github.com/yiisoft/yii2-symfonymailer/blob/master/LICENSE.md">LICENSE</a>-file.</p>
+<p><a href="https://packagist.org/packages/yiisoft/yii2-symfonymailer"><img src="../../../user-content.yiiframework.com/img/LVprrkHln6ulhT6q8G5R2Q/https/poser.pugx.org/yiisoft/yii2-symfonymailer/v/stable.png" alt="Latest Stable Version" /></a>
+<a href="https://packagist.org/packages/yiisoft/yii2-symfonymailer"><img src="../../../user-content.yiiframework.com/img/0JwTE7CiqpuAbr3xlAV9_Q/https/poser.pugx.org/yiisoft/yii2-symfonymailer/downloads.png" alt="Total Downloads" /></a>
+<a href="https://github.com/yiisoft/yii2-symfonymailer/actions"><img src="../../../user-content.yiiframework.com/img/DKY9c0GV5wLOSy09vi7KZw/https/github.com/yiisoft/yii2-symfonymailer/workflows/build/badge.svg" alt="Build Status" /></a></p>
+<h4>Installation <span id="installation"></span><a href="#installation" class="hashlink">¶</a></h4><p>The preferred way to install this extension is through <a href="http://getcomposer.org/download/">composer</a>.</p>
+<p>Either run</p>
+<pre><code class="hljs nginx"><span class="hljs-attribute">php</span> composer.phar require --prefer-dist yiisoft/yii2-symfonymailer
+</code></pre>
+<p>or add</p>
+<pre><code class="hljs json language-json"><span class="hljs-string">"yiisoft/yii2-symfonymailer"</span>: <span class="hljs-string">"~2.0.0"</span>
+</code></pre>
+<p>to the require section of your composer.json.</p>
+<h4>Usage <span id="usage"></span><a href="#usage" class="hashlink">¶</a></h4><p>To use this extension,  simply add the following code in your application configuration:</p>
+<pre><code class="hljs php language-php"><span class="hljs-keyword">return</span> [
+    <span class="hljs-comment">//....</span>
+    <span class="hljs-string">'components'</span> =&gt; [
+        <span class="hljs-string">'mailer'</span> =&gt; [
+            <span class="hljs-string">'class'</span> =&gt; \yii\symfonymailer\Mailer::class,            
+            <span class="hljs-string">'transport'</span> =&gt; [
+                <span class="hljs-string">'scheme'</span> =&gt; <span class="hljs-string">'smtps'</span>,
+                <span class="hljs-string">'host'</span> =&gt; <span class="hljs-string">''</span>,
+                <span class="hljs-string">'username'</span> =&gt; <span class="hljs-string">''</span>,
+                <span class="hljs-string">'password'</span> =&gt; <span class="hljs-string">''</span>,
+                <span class="hljs-string">'port'</span> =&gt; <span class="hljs-number">465</span>,
+                <span class="hljs-string">'dsn'</span> =&gt; <span class="hljs-string">'native://default'</span>,
+            ],
+            <span class="hljs-string">'viewPath'</span> =&gt; <span class="hljs-string">'@common/mail'</span>,
+            <span class="hljs-comment">// send all mails to a file by default. You have to set</span>
+			<span class="hljs-comment">// 'useFileTransport' to false and configure transport</span>
+			<span class="hljs-comment">// for the mailer to send real emails.</span>
+			<span class="hljs-string">'useFileTransport'</span> =&gt; <span class="hljs-keyword">false</span>,
+        ],
+    ],
+];
+</code></pre>
+<p>or
+<code>`</code>php
+return [</p>
+<pre><code class="hljs php"><span class="hljs-comment">//....</span>
+<span class="hljs-string">'components'</span> =&gt; [
+    <span class="hljs-string">'mailer'</span> =&gt; [
+        <span class="hljs-string">'class'</span> =&gt; \yii\symfonymailer\Mailer::class,            
+        <span class="hljs-string">'transport'</span> =&gt; [
+            <span class="hljs-string">'dsn'</span> =&gt; <span class="hljs-string">'smtp://user:pass@smtp.example.com:25'</span>,
+        ],
+    ],
+],
+</code></pre>
+<p>];
+<code>`</code></p>
+<p>You can then send an email as follows:</p>
+<pre><code class="hljs php language-php">Yii::$app-&gt;mailer-&gt;compose(<span class="hljs-string">'contact/html'</span>)
+     -&gt;setFrom(<span class="hljs-string">'from@domain.com'</span>)
+     -&gt;setTo($form-&gt;email)
+     -&gt;setSubject($form-&gt;subject)
+     -&gt;send();
+</code></pre>
+<h4>Migrating from yiisoft/yii2-swiftmailer <span id="migrating-from-yiisoftyii2-swiftmailer"></span><a href="#migrating-from-yiisoftyii2-swiftmailer" class="hashlink">¶</a></h4><p>To migrate from the deprecated <a href="https://github.com/yiisoft/yii2-swiftmailer">yiisoft/yii2-swiftmailer</a> to this extension you need to update the application config.</p>
+<p>Swiftmailer default transport was the <code>SendmailTransport</code>, while this extension will default to a <code>NullTransport</code> (sends no mail). You can use the swiftmailer default like the following:</p>
+<p>   <code>`</code>php
+   'mailer' =&gt; [</p>
+<pre><code class="hljs php">   <span class="hljs-string">'class'</span> =&gt; yii\symfonymailer\Mailer::class,
+   <span class="hljs-string">'transport'</span> =&gt; [
+       <span class="hljs-string">'dsn'</span> =&gt; <span class="hljs-string">'sendmail://default'</span>,
+   ],
+</code></pre>
+<p>   ],
+   <code>`</code></p>
+</div>                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12 col-lg-3">
+
+                    
+<div class="vote-box content">
+    <div class="voting">  <span class="votes-up">    <span class="votes">1</span> <a href="yii2-symfonymailer.html" data-vote-url="/ajax/vote?type=extension&amp;id=2999&amp;vote=1"><i title="Vote Up" class="thumbs-up"></i></a>    </span>  </span>  <span class="votes-down">    <span class="votes">0</span> <a href="yii2-symfonymailer.html" data-vote-url="/ajax/vote?type=extension&amp;id=2999&amp;vote=0"><i title="Vote Down" class="thumbs-down"></i></a>    </span>  </span></div>    
+<div class="star-wrapper">
+    <span class="fa fa-star-o" data-star-url="/ajax/star?type=extension&amp;id=2999"></span>            <span class="star-count">1</span> follower    </div>
+
+    <div class="star-wrapper">
+        <i class="fa fa-download" aria-hidden="true"></i>        <span class="star-count">224&thinsp;260</span> downloads
+    </div>
+
+    <div class="version"><span>Yii Version:</span> <a href="https://www.yiiframework.com/extensions?version=2.0">2.0</a></div>
+    <div class="people"><span>License:</span> <a href="https://spdx.org/licenses/BSD-3-Clause.html#licenseText" title="BSD 3-Clause &quot;New&quot; or &quot;Revised&quot; License">BSD-3-Clause</a></div>
+
+    <div class="group"><span>Category:</span> <a href="https://www.yiiframework.com/extensions?category=9">Mail</a></div>
+    <div class="tags"><span>Tags:</span> </div>
+            <div class="people"><span>Developed by:</span> <a href="https://www.yiiframework.com/team">The Yii Team</a></div>
+        <div class="dates"><span>Created on:</span> Sep 19, 2022</div>
+        <div class="dates"><span>Last updated:</span> <span class="not-set">(not set)</span></div>
+    </div>
+
+        <a href="yii2-symfonymailer/doc/api/3.html">API Documentation</a><br>    <hr>
+
+
+    <a href="https://packagist.org/packages/yiisoft/yii2-symfonymailer" rel="noopener noreferrer" target="_blank">Packagist Profile</a><br>
+    <a href="https://github.com/yiisoft/yii2-symfonymailer" rel="noopener noreferrer" target="_blank">Github Repository</a><br>
+
+
+
+
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</div>
+<div class="comments-wrapper">
+    <div class="container comments">
+        
+<div class="row" id="user-notes">
+    <div class="col-md-offset-2 col-md-9">
+                    <span class="heading">User Contributed Notes</span>
+            </div>
+</div>
+<div class="row">
+    <div class="col-md-offset-2 col-md-9">
+        <div class="component-comments lang-en" id="comments">
+                    </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-offset-2 col-md-9">
+        <span class="heading">Leave a comment</span>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-offset-2 col-md-9">
+        Please only use comments to help explain the above extension.<br/>If you have any questions, please ask in <a href="https://www.yiiframework.com/forum">the forum</a> instead.    </div>
+</div>
+<div class="row">
+    <div class="col-md-offset-2 col-md-9">
+                    <p><a href="https://www.yiiframework.com/signup">Signup</a> or <a href="https://www.yiiframework.com/login">Login</a> in order to comment.</p>
+            </div>
+</div>
+    </div>
+</div>
+
+            <div class="footer-wrapper">
+    <footer>
+        <div class="container">
+            <div class="footer-inner">
+                <div class="row">
+                    <div class="col-md-2 col-sm-4 hidden-xs">
+                        <ul class="footerList">
+  <li class="footerList_item">
+    <div>About</div>
+  </li>
+  <li class="footerList_item">
+    <a href="../../doc/guide/2.0/en/intro-yii.html">About Yii</a>  </li>
+  <li class="footerList_item">
+    <a href="https://www.yiiframework.com/news">News</a>  </li>
+  <li class="footerList_item">
+    <a href="https://www.yiiframework.com/license">License</a>  </li>
+  <li class="footerList_item">
+    <a href="https://www.yiiframework.com/contact">Contact Us</a>  </li>
+</ul>
+                    </div>
+                    <div class="col-md-2 col-sm-4 hidden-xs">
+                        <ul class="footerList">
+  <li class="footerList_item">
+    <div>Downloads</div>
+  </li>
+  <li class="footerList_item">
+    <a href="https://www.yiiframework.com/download">Framework</a>  </li>
+  <li class="footerList_item">
+    <a href="https://www.yiiframework.com/download#offline-documentation">Documentation</a>  </li>
+  <li class="footerList_item">
+    <a href="https://www.yiiframework.com/extensions">Extensions</a>  </li>
+  <li class="footerList_item">
+    <a href="https://www.yiiframework.com/logo">Logo</a>  </li>
+</ul>
+                    </div>
+                    <div class="col-md-2 col-sm-4 hidden-xs">
+                        <ul class="footerList">
+  <li class="footerList_item">
+    <div>Documentation</div>
+  </li>
+  <li class="footerList_item">
+    <a href="../../doc/guide/2.0/en.html">Guide</a>  </li>
+  <li class="footerList_item">
+    <a href="../../doc/api/2.html">API</a>  </li>
+  <li class="footerList_item">
+    <a href="https://www.yiiframework.com/wiki">Wiki</a>  </li>
+  <li class="footerList_item">
+    <a href="https://www.yiiframework.com/resources">Resources</a>  </li>
+</ul>
+                    </div>
+                    <div class="col-md-2 col-sm-4 hidden-xs">
+                        <ul class="footerList">
+  <li class="footerList_item">
+    <div>Development</div>
+  </li>
+  <li class="footerList_item">
+    <a href="https://www.yiiframework.com/contribute">Contribute</a>  </li>
+  <li class="footerList_item">
+    <a href="https://github.com/yiisoft/yii2/commits/master" rel="noopener noreferrer" target="_blank">Latest Updates</a>  </li>
+  <li class="footerList_item">
+    <a href="https://www.yiiframework.com/report-issue">Report a Bug</a>  </li>
+  <li class="footerList_item">
+    <a href="https://www.yiiframework.com/security">Report Security Issue</a>  </li>
+</ul>
+                    </div>
+                    <div class="col-md-2 col-sm-4 hidden-xs">
+                        <ul class="footerList">
+    <li class="footerList_item">
+        <div>Community</div>
+    </li>
+    <li class="footerList_item">
+        <a href="https://www.yiiframework.com/forum">Forum</a>    </li>
+    <li class="footerList_item">
+        <a href="https://www.yiiframework.com/chat">Live Chat</a>    </li>
+    <li class="footerList_item">
+        <a href="https://www.facebook.com/groups/yiitalk/" target="_blank" rel="noopener noreferrer">Facebook Group</a>
+    </li>
+    <li class="footerList_item">
+        <a href="https://www.yiiframework.com/user/halloffame">Hall of Fame</a>    </li>
+    <li class="footerList_item">
+        <a href="https://www.yiiframework.com/badges">Badges</a>    </li>
+</ul>
+                    </div>
+                    <div class="col-md-2 col-sm-4 hidden-xs">
+                        <ul class="footerList">
+  <li class="footerList_item">
+      <span class="social">
+          <a href="https://github.com/yiisoft" aria-label="GitHub Account" target="_blank" rel="noopener noreferrer"><i class="fa fa-github"></i></a>
+          <a href="https://twitter.com/yiiframework" aria-label="Twitter Account" target="_blank" rel="noopener noreferrer"><i class="fa fa-twitter"></i></a>
+          <a href="https://www.facebook.com/groups/yiitalk/" aria-label="Facebook Group" target="_blank" rel="noopener noreferrer"><i class="fa fa-facebook"></i></a>
+          <a href="https://www.yiiframework.com/rss.xml" aria-label="RSS Feed"><i class="fa fa-rss"></i></a>      </span>
+  </li>
+  <li class="footerList_item">
+    <a href="https://www.yiiframework.com/tos">Terms of service</a>  </li>
+  <li class="footerList_item">
+      <a href="https://www.yiiframework.com/license">License</a>  </li>
+  <li class="footerList_item">
+      <a href="https://github.com/yiisoft-contrib/yiiframework.com" target="_blank" rel="noopener noreferrer">Website Source Code</a>
+  </li>
+  <li class="footerList_item">
+      &nbsp;
+  </li>
+  <li class="footerList_item">
+    &copy; 2008 - 2022 Yii
+  </li>
+  <li class="footerList_item">
+      Design: <a href="https://www.eshill.ru/" target="_blank" rel="noopener noreferrer">Eshill</a>
+  </li>
+</ul>
+                    </div>
+                    <div class="col-xs-12 hidden-sm hidden-md hidden-lg">
+                        <div class="center-block">
+                            <div>
+                                <ul class="footerList">
+  <li class="footerList_item">
+      <span class="social">
+          <a href="https://github.com/yiisoft" aria-label="GitHub Account" target="_blank" rel="noopener noreferrer"><i class="fa fa-github"></i></a>
+          <a href="https://twitter.com/yiiframework" aria-label="Twitter Account" target="_blank" rel="noopener noreferrer"><i class="fa fa-twitter"></i></a>
+          <a href="https://www.facebook.com/groups/yiitalk/" aria-label="Facebook Group" target="_blank" rel="noopener noreferrer"><i class="fa fa-facebook"></i></a>
+          <a href="https://www.yiiframework.com/rss.xml" aria-label="RSS Feed"><i class="fa fa-rss"></i></a>      </span>
+  </li>
+  <li class="footerList_item">
+    <a href="https://www.yiiframework.com/tos">Terms of service</a>  </li>
+  <li class="footerList_item">
+      <a href="https://www.yiiframework.com/license">License</a>  </li>
+  <li class="footerList_item">
+      <a href="https://github.com/yiisoft-contrib/yiiframework.com" target="_blank" rel="noopener noreferrer">Website Source Code</a>
+  </li>
+  <li class="footerList_item">
+      &nbsp;
+  </li>
+  <li class="footerList_item">
+    &copy; 2008 - 2022 Yii
+  </li>
+  <li class="footerList_item">
+      Design: <a href="https://www.eshill.ru/" target="_blank" rel="noopener noreferrer">Eshill</a>
+  </li>
+</ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 text-center">
+                        <ul class="footerList">
+    <li class="footerList_item">
+        <div>Supported by</div>
+    </li>
+    <li class="footerList_item">
+            <a href="https://opencollective.com/yiisoft" aria-label="OpenCollective" target="_blank" rel="noopener
+            noreferrer"><img
+                    alt="OpenCollective" height="40" src="../../image/collective.png"/></a>
+    </li>
+    <li class="footerList_item">
+        <a href="https://www.jetbrains.com/?from=yii" aria-label="JetBrains website" target="_blank" rel="noopener
+        noreferrer"><img
+                alt="JetBrains logo" width="80" src="../../image/jetbrains.svg"/></a>
+    </li>
+</ul>
+
+
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</div>
+
+        </div> <!-- close the id="page-wrapper" -->
+
+        <script src="../../assets/84e61ab0/js/all.mina079.js?v=1664835330"></script>    </body>
+
+<!-- Mirrored from www.yiiframework.com/extension/yiisoft/yii2-symfonymailer by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 07 Dec 2022 14:51:09 GMT -->
+</html>

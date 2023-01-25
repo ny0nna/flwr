@@ -1,0 +1,398 @@
+<html><!-- Mirrored from www.yiiframework.com/extension/yiisoft/yii2-bootstrap/doc/guide/2.0/en/usage-widgets by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 07 Dec 2022 14:52:24 GMT --><!-- Added by HTTrack --><head><meta http-equiv="content-type" content="text/html;charset=UTF-8"><!-- /Added by HTTrack -->
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../../../../../favico/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../../../../../../../favico/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../../../../../../../favico/favicon-16x16.png">
+        <link rel="icon" type="image/svg+xml" href="../../../../../../../favico/favicon.svg">
+        <link rel="icon" type="image/png" href="../../../../../../../favico/favicon.png">
+        <link rel="shortcut icon" href="../../../../../../../favico/favicon.ico">
+        <link rel="manifest" href="../../../../../../../favico/manifest.json">
+        <link rel="mask-icon" href="../../../../../../../favico/safari-pinned-tab.svg" color="#1e6887">
+        <meta name="msapplication-config" content="https://www.yiiframework.com/favico/browserconfig.xml">
+        <meta name="theme-color" content="#1e6887">
+
+        <link href="https://www.yiiframework.com/rss.xml" type="application/rss+xml" rel="alternate" title="Lives News for Yii Framework">
+
+        <meta name="csrf-param" content="_csrf">
+<meta name="csrf-token" content="eq0FfcgMHNJcq_s1-hEpydHm9eoBlv6_PGmHQWIglioY3jEykTRw4hTPkGqrZlGBl7Gbk2rlm9JlIu83W2LnYQ==">
+        
+        <title>Yii widgets</title>
+
+        <meta property="og:site_name" content="Yii Framework">
+        <meta property="og:title" content="Usage: Yii widgets">
+        <meta property="og:image" content="../../../../../../../image/facebook_cover.png">
+        <meta property="og:url" content="/extension/yiisoft/yii2-bootstrap/doc/guide/2.0/en/usage-widgets">
+        <meta property="og:description" content="">
+
+        <meta name="twitter:card" content="summary">
+        <meta name="twitter:site" content="yiiframework">
+        <meta name="twitter:title" content="Usage: Yii widgets">
+        <meta name="twitter:description" content="">
+        <meta name="twitter:image" content="../../../../../../../image/twitter_cover.png">
+        <meta name="twitter:image:width" content="120">
+        <meta name="twitter:image:height" content="120">
+
+        <link type="application/opensearchdescription+xml" href="https://www.yiiframework.com/opensearch.xml" title="Yii Search" rel="search">
+<link href="../../../../../../../assets/84e61ab0/css/all.mina079.css?v=1664835330" rel="stylesheet">
+<script>yiiBaseUrl = ""
+yiiSearchLanguage = "en"
+yiiSearchVersion = "2.0"</script>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-707ZP35KCT"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-707ZP35KCT');
+</script>
+    </head>
+    <body data-spy="scroll" data-target="#scrollnav" data-offset="1">
+        
+        <div id="page-wrapper" class="">
+
+            <header class="navbar navbar-inverse navbar-static" id="top">
+    <div class="container">
+        <div id="main-nav-head" class="navbar-header">
+            <a href="https://www.yiiframework.com/" class="navbar-brand">
+                <img src="../../../../../../../image/logo.svg" alt="Yii PHP Framework" width="165" height="35">
+            </a>
+            <button type="button" class="navbar-toggle" data-toggle="collapse" aria-label="Toggle navigation" data-target=".navbar-collapse"><i class="fa fa-inverse fa-bars"></i></button>
+        </div>
+
+        <div class="navbar-collapse collapse navbar-right">
+            <ul id="main-nav" class="nav navbar-nav navbar-main-menu nav"><li class="active" title="The Definitive Guide to Yii"><a href="../../../../../../../doc/guide/2.0/en.html">Guide</a></li>
+<li title="API Documentation"><a href="../../../../../../../doc/api/2.html">API</a></li>
+<li title="Community Wiki"><a href="https://www.yiiframework.com/wiki">Wiki</a></li>
+<li title="Community Forum"><a href="https://www.yiiframework.com/forum">Forum</a></li>
+<li class="dropdown active"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Community <span class="caret"></span></a><ul id="w3" class="dropdown-menu"><li><a href="https://www.yiiframework.com/chat" tabindex="-1">Live Chat</a></li>
+<li class="active" title="Extensions"><a href="https://www.yiiframework.com/extensions" tabindex="-1">Extensions</a></li>
+<li><a href="https://www.yiiframework.com/community" tabindex="-1">Resources</a></li>
+<li title="Community Members"><a href="https://www.yiiframework.com/user" tabindex="-1">Members</a></li>
+<li title="Community Hall of Fame"><a href="https://www.yiiframework.com/user/halloffame" tabindex="-1">Hall of Fame</a></li>
+<li title="Community Badges"><a href="https://www.yiiframework.com/badges" tabindex="-1">Badges</a></li></ul></li>
+<li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">More <span class="caret"></span></a><ul id="w4" class="dropdown-menu"><li class="separator dropdown-header">Learn</li>
+<li><a href="https://www.yiiframework.com/books" tabindex="-1">Books</a></li>
+<li><a href="https://www.yiiframework.com/resources" tabindex="-1">Resources</a></li>
+<li class="separator dropdown-header">Develop</li>
+<li><a href="https://www.yiiframework.com/download" tabindex="-1">Download Yii</a></li>
+<li><a href="https://www.yiiframework.com/report-issue" tabindex="-1">Report an Issue</a></li>
+<li><a href="https://www.yiiframework.com/security" tabindex="-1">Report a Security Issue</a></li>
+<li><a href="https://www.yiiframework.com/contribute" tabindex="-1">Contribute to Yii</a></li>
+<li><a href="https://www.yiiframework.com/donate" tabindex="-1">Donate</a></li>
+<li class="separator dropdown-header">About</li>
+<li><a href="../../../../../../../doc/guide/2.0/en/intro-yii.html" tabindex="-1">What is Yii?</a></li>
+<li><a href="https://www.yiiframework.com/release-cycle" tabindex="-1">Release Cycle</a></li>
+<li><a href="https://www.yiiframework.com/news" tabindex="-1">News</a></li>
+<li><a href="https://www.yiiframework.com/license" tabindex="-1">License</a></li>
+<li><a href="https://www.yiiframework.com/team" tabindex="-1">Team</a></li>
+<li><a href="https://www.yiiframework.com/logo" tabindex="-1">Official Logos and Design</a></li></ul></li></ul>
+            
+            <div class="nav navbar-nav navbar-right">
+                <ul id="login-nav" class="nav navbar-nav navbar-main-menu nav"><li><a href="https://www.yiiframework.com/login">Login</a></li></ul>            </div>
+
+            <div class="nav navbar-nav navbar-right">
+                        <form id="search-form" class="navbar-form" action="https://www.yiiframework.com/search" method="get">
+<input type="hidden" name="language" value="en">
+<input type="hidden" name="version" value="2.0">
+<input type="hidden" name="type" value="guide">        <div class="form-group nospace">
+            <div class="input-group">
+                <input type="text" class="form-control" id="search" name="q" placeholder="Search Guide…" autocomplete="off" value="">
+            </div>
+        </div>
+        <div id="search-resultbox"></div>
+        </form>            </div>
+
+            
+        </div>
+    </div>
+</header>
+
+            <div class="section-header-wrap">
+    <div class="container section-header lang-en">
+        <div class="row headline-row">
+            <div class="col-xs-12 col-md-12">
+                <div class="section-headline"><a href="../en.html">Twitter Bootstrap Extension for Yii 2</a></div>
+            </div>
+                    </div>
+                <div class="row content-selector-row">
+            <div class="col-xs-12 col-md-offset-7 col-md-5">
+                <nav class="version-selector">
+        <div class="btn-group btn-group-justified btn-group-3-element">
+                        <div class="btn-group btn-group-sm"><button class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-expanded="false">English <span class="caret"></span></button><ul class="dropdown-menu" role="menu"><li role="presentation"><a href="https://www.yiiframework.com/extension/yiisoft/yii2-bootstrap/doc/guide/2.0/ru/usage-widgets" role="menuitem" tabindex="-1">русский</a></li>
+<li role="presentation"><a href="https://www.yiiframework.com/extension/yiisoft/yii2-bootstrap/doc/guide/2.0/es/usage-widgets" role="menuitem" tabindex="-1">español</a></li>
+<li role="presentation"><a href="https://www.yiiframework.com/extension/yiisoft/yii2-bootstrap/doc/guide/2.0/zh-cn/usage-widgets" role="menuitem" tabindex="-1">中文</a></li>
+<li role="presentation"><a href="https://www.yiiframework.com/extension/yiisoft/yii2-bootstrap/doc/guide/2.0/ja/usage-widgets" role="menuitem" tabindex="-1">日本語</a></li>
+<li role="presentation"><a href="https://www.yiiframework.com/extension/yiisoft/yii2-bootstrap/doc/guide/2.0/uk/usage-widgets" role="menuitem" tabindex="-1">українська</a></li>
+<li role="presentation"><a href="https://www.yiiframework.com/extension/yiisoft/yii2-bootstrap/doc/guide/2.0/pt-br/usage-widgets" role="menuitem" tabindex="-1">português</a></li></ul></div>
+                <div class="btn-group btn-group-sm"><button class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Version 2.0 <span class="caret"></span></button><ul class="dropdown-menu" role="menu"></ul></div>    </div>
+</nav>
+            </div>
+        </div>
+            </div>
+</div>
+
+                        <div class="visible-huge fixed lang-en">
+    <nav id="scrollnav" data-spy="affix" data-offset-top="120">
+        <ul class="nav hidden-xs hidden-sm">
+            <li><a href="#yii-widgets">Yii widgets</a></li><li><a href="#customizing-css-classes">Customizing widget CSS classes</a></li><li><a href="#user-notes">User Contributed Notes</a></li>        </ul>
+    </nav>
+</div>
+<div class="container guide-view" xmlns="http://www.w3.org/1999/xhtml">
+    <div class="row visible-xs">
+        <div class="col-md-12">
+            <p class="pull-right topmost">
+                <button type="button" title="Toggle Side-Nav" class="btn btn-primary btn-xs" data-toggle="offcanvas">SideNav</button>
+            </p>
+        </div>
+    </div>
+    <div class="row row-offcanvas">
+        <div class="col-sm-3 col-md-3 col-lg-3 lang-en">
+                        <div id="guide-navigation" class="sidenav-offcanvas"><a class="list-group-item has-children" href="#" data-toggle="collapse" data-parent="#guide-navigation" data-target="#guide-navigation-0">Getting Started</a><div id="guide-navigation-0" class="submenu panel-collapse collapse"><a class="list-group-item" href="installation.html">Installation</a>
+<a class="list-group-item" href="assets-setup.html">Assets Setup</a>
+<a class="list-group-item" href="basic-usage.html">Basic Usage</a></div>
+<a class="list-group-item has-children active" href="#" data-toggle="collapse" data-parent="#guide-navigation" data-target="#guide-navigation-1">Usage</a><div id="guide-navigation-1" class="submenu panel-collapse collapse in active-parent"><a class="list-group-item active" href="usage-widgets.html">Yii widgets</a>
+<a class="list-group-item" href="helper-html.html">Html helper</a>
+<a class="list-group-item" href="asset-bundles.html">Asset Bundles</a></div>
+<a class="list-group-item has-children" href="#" data-toggle="collapse" data-parent="#guide-navigation" data-target="#guide-navigation-2">Additional topics</a><div id="guide-navigation-2" class="submenu panel-collapse collapse"><a class="list-group-item" href="topics-less.html">Using the .less files of Bootstrap directly</a></div></div>        </div>
+        <div class="col-sm-9 col-md-9 col-lg-9" role="main">
+
+            <div class="guide-content content lang-en">
+    
+    <h1 id="yii-widgets">Yii widgets <a href="#yii-widgets" class="hashlink"></a></h1><p>Most complex bootstrap components are wrapped into Yii widgets to allow more robust syntax and integrate with
+framework features. All widgets belong to <code>\yii\bootstrap</code> namespace:</p>
+<ul>
+<li><a href="../../../api/2.0/yii-bootstrap-activeform.html">ActiveForm</a></li>
+<li><a href="../../../api/2.0/yii-bootstrap-alert.html">Alert</a></li>
+<li><a href="../../../api/2.0/yii-bootstrap-button.html">Button</a></li>
+<li><a href="../../../api/2.0/yii-bootstrap-buttondropdown.html">ButtonDropdown</a></li>
+<li><a href="../../../api/2.0/yii-bootstrap-buttongroup.html">ButtonGroup</a></li>
+<li><a href="../../../api/2.0/yii-bootstrap-carousel.html">Carousel</a></li>
+<li><a href="../../../api/2.0/yii-bootstrap-collapse.html">Collapse</a></li>
+<li><a href="../../../api/2.0/yii-bootstrap-dropdown.html">Dropdown</a></li>
+<li><a href="../../../api/2.0/yii-bootstrap-modal.html">Modal</a></li>
+<li><a href="../../../api/2.0/yii-bootstrap-nav.html">Nav</a></li>
+<li><a href="../../../api/2.0/yii-bootstrap-navbar.html">NavBar</a></li>
+<li><a href="../../../api/2.0/yii-bootstrap-progress.html">Progress</a></li>
+<li><a href="../../../api/2.0/yii-bootstrap-tabs.html">Tabs</a></li>
+</ul>
+<h2 id="customizing-css-classes">Customizing widget CSS classes  <a href="#customizing-css-classes" class="hashlink"></a></h2><p>The widgets allow quick composition of the HTML for the bootstrap components that require the bootstrap CSS classes.
+The default classes for a particular component will be added automatically by the widget, and the optional classes that you may want to customize are usually supported through the properties of the widget.</p>
+<p>For example, you may use <a href="../../../api/2.0/yii-bootstrap-widget.html#$options-detail">yii\bootstrap\Button::$options</a> to customize the appearance of a button.
+The class 'btn' which is required for a button will be added automatically, so you don't need to worry about it.
+All you need is specify a particular button class:</p>
+<pre><code class="hljs php language-php"><span class="hljs-keyword">echo</span> Button::widget([
+    <span class="hljs-string">'label'</span> =&gt; <span class="hljs-string">'Action'</span>,
+    <span class="hljs-string">'options'</span> =&gt; [<span class="hljs-string">'class'</span> =&gt; <span class="hljs-string">'btn-primary'</span>], <span class="hljs-comment">// produces class "btn btn-primary"</span>
+]);
+</code></pre>
+<p>However, sometimes you may need to replace the default classes with the alternative ones.
+For example, the widget <a href="../../../api/2.0/yii-bootstrap-buttongroup.html">yii\bootstrap\ButtonGroup</a> uses 'btn-group' class for the container div by default,
+but you may need to use 'btn-group-vertical' instead to align the buttons vertically.
+Using a plain 'class' option simply adds 'btn-group-vertical' to 'btn-group', which will produce an incorrect result.
+In order to override the default classes of a widget, you need to specify the 'class' option as an array that contains the customized class definition under the 'widget' key:</p>
+<pre><code class="hljs php language-php"><span class="hljs-keyword">echo</span> ButtonGroup::widget([
+    <span class="hljs-string">'options'</span> =&gt; [
+        <span class="hljs-string">'class'</span> =&gt; [<span class="hljs-string">'widget'</span> =&gt; <span class="hljs-string">'btn-group-vertical'</span>] <span class="hljs-comment">// replaces 'btn-group' with 'btn-group-vertical'</span>
+    ],
+    <span class="hljs-string">'buttons'</span> =&gt; [
+        [<span class="hljs-string">'label'</span> =&gt; <span class="hljs-string">'A'</span>],
+        [<span class="hljs-string">'label'</span> =&gt; <span class="hljs-string">'B'</span>],
+    ]
+]);
+</code></pre>
+
+    <div class="prev-next">
+        <div class="prev-next__left"><a href="basic-usage.html"><span class="chevron-left" aria-hidden="true"></span> Getting Started: Basic Usage</a></div><div class="prev-next__center"><a href="#top">Go to Top <span class="chevron-up" aria-hidden="true"></span></a></div><div class="prev-next__right"><a href="helper-html.html">Html helper <span class="chevron-right" aria-hidden="true"></span></a></div>    </div>
+
+    <!-- TODO add edit URL -->
+
+</div>
+        </div>
+    </div>
+</div>
+
+            <div class="footer-wrapper">
+    <footer>
+        <div class="container">
+            <div class="footer-inner">
+                <div class="row">
+                    <div class="col-md-2 col-sm-4 hidden-xs">
+                        <ul class="footerList">
+  <li class="footerList_item">
+    <div>About</div>
+  </li>
+  <li class="footerList_item">
+    <a href="../../../../../../../doc/guide/2.0/en/intro-yii.html">About Yii</a>  </li>
+  <li class="footerList_item">
+    <a href="https://www.yiiframework.com/news">News</a>  </li>
+  <li class="footerList_item">
+    <a href="https://www.yiiframework.com/license">License</a>  </li>
+  <li class="footerList_item">
+    <a href="https://www.yiiframework.com/contact">Contact Us</a>  </li>
+</ul>
+                    </div>
+                    <div class="col-md-2 col-sm-4 hidden-xs">
+                        <ul class="footerList">
+  <li class="footerList_item">
+    <div>Downloads</div>
+  </li>
+  <li class="footerList_item">
+    <a href="https://www.yiiframework.com/download">Framework</a>  </li>
+  <li class="footerList_item">
+    <a href="https://www.yiiframework.com/download#offline-documentation">Documentation</a>  </li>
+  <li class="footerList_item">
+    <a href="https://www.yiiframework.com/extensions">Extensions</a>  </li>
+  <li class="footerList_item">
+    <a href="https://www.yiiframework.com/logo">Logo</a>  </li>
+</ul>
+                    </div>
+                    <div class="col-md-2 col-sm-4 hidden-xs">
+                        <ul class="footerList">
+  <li class="footerList_item">
+    <div>Documentation</div>
+  </li>
+  <li class="footerList_item">
+    <a href="../../../../../../../doc/guide/2.0/en.html">Guide</a>  </li>
+  <li class="footerList_item">
+    <a href="../../../../../../../doc/api/2.html">API</a>  </li>
+  <li class="footerList_item">
+    <a href="https://www.yiiframework.com/wiki">Wiki</a>  </li>
+  <li class="footerList_item">
+    <a href="https://www.yiiframework.com/resources">Resources</a>  </li>
+</ul>
+                    </div>
+                    <div class="col-md-2 col-sm-4 hidden-xs">
+                        <ul class="footerList">
+  <li class="footerList_item">
+    <div>Development</div>
+  </li>
+  <li class="footerList_item">
+    <a href="https://www.yiiframework.com/contribute">Contribute</a>  </li>
+  <li class="footerList_item">
+    <a href="https://github.com/yiisoft/yii2/commits/master" rel="noopener noreferrer" target="_blank">Latest Updates</a>  </li>
+  <li class="footerList_item">
+    <a href="https://www.yiiframework.com/report-issue">Report a Bug</a>  </li>
+  <li class="footerList_item">
+    <a href="https://www.yiiframework.com/security">Report Security Issue</a>  </li>
+</ul>
+                    </div>
+                    <div class="col-md-2 col-sm-4 hidden-xs">
+                        <ul class="footerList">
+    <li class="footerList_item">
+        <div>Community</div>
+    </li>
+    <li class="footerList_item">
+        <a href="https://www.yiiframework.com/forum">Forum</a>    </li>
+    <li class="footerList_item">
+        <a href="https://www.yiiframework.com/chat">Live Chat</a>    </li>
+    <li class="footerList_item">
+        <a href="https://www.facebook.com/groups/yiitalk/" target="_blank" rel="noopener noreferrer">Facebook Group</a>
+    </li>
+    <li class="footerList_item">
+        <a href="https://www.yiiframework.com/user/halloffame">Hall of Fame</a>    </li>
+    <li class="footerList_item">
+        <a href="https://www.yiiframework.com/badges">Badges</a>    </li>
+</ul>
+                    </div>
+                    <div class="col-md-2 col-sm-4 hidden-xs">
+                        <ul class="footerList">
+  <li class="footerList_item">
+      <span class="social">
+          <a href="https://github.com/yiisoft" aria-label="GitHub Account" target="_blank" rel="noopener noreferrer"><i class="fa fa-github"></i></a>
+          <a href="https://twitter.com/yiiframework" aria-label="Twitter Account" target="_blank" rel="noopener noreferrer"><i class="fa fa-twitter"></i></a>
+          <a href="https://www.facebook.com/groups/yiitalk/" aria-label="Facebook Group" target="_blank" rel="noopener noreferrer"><i class="fa fa-facebook"></i></a>
+          <a href="https://www.yiiframework.com/rss.xml" aria-label="RSS Feed"><i class="fa fa-rss"></i></a>      </span>
+  </li>
+  <li class="footerList_item">
+    <a href="https://www.yiiframework.com/tos">Terms of service</a>  </li>
+  <li class="footerList_item">
+      <a href="https://www.yiiframework.com/license">License</a>  </li>
+  <li class="footerList_item">
+      <a href="https://github.com/yiisoft-contrib/yiiframework.com" target="_blank" rel="noopener noreferrer">Website Source Code</a>
+  </li>
+  <li class="footerList_item">
+      &nbsp;
+  </li>
+  <li class="footerList_item">
+    © 2008 - 2022 Yii
+  </li>
+  <li class="footerList_item">
+      Design: <a href="https://www.eshill.ru/" target="_blank" rel="noopener noreferrer">Eshill</a>
+  </li>
+</ul>
+                    </div>
+                    <div class="col-xs-12 hidden-sm hidden-md hidden-lg">
+                        <div class="center-block">
+                            <div>
+                                <ul class="footerList">
+  <li class="footerList_item">
+      <span class="social">
+          <a href="https://github.com/yiisoft" aria-label="GitHub Account" target="_blank" rel="noopener noreferrer"><i class="fa fa-github"></i></a>
+          <a href="https://twitter.com/yiiframework" aria-label="Twitter Account" target="_blank" rel="noopener noreferrer"><i class="fa fa-twitter"></i></a>
+          <a href="https://www.facebook.com/groups/yiitalk/" aria-label="Facebook Group" target="_blank" rel="noopener noreferrer"><i class="fa fa-facebook"></i></a>
+          <a href="https://www.yiiframework.com/rss.xml" aria-label="RSS Feed"><i class="fa fa-rss"></i></a>      </span>
+  </li>
+  <li class="footerList_item">
+    <a href="https://www.yiiframework.com/tos">Terms of service</a>  </li>
+  <li class="footerList_item">
+      <a href="https://www.yiiframework.com/license">License</a>  </li>
+  <li class="footerList_item">
+      <a href="https://github.com/yiisoft-contrib/yiiframework.com" target="_blank" rel="noopener noreferrer">Website Source Code</a>
+  </li>
+  <li class="footerList_item">
+      &nbsp;
+  </li>
+  <li class="footerList_item">
+    © 2008 - 2022 Yii
+  </li>
+  <li class="footerList_item">
+      Design: <a href="https://www.eshill.ru/" target="_blank" rel="noopener noreferrer">Eshill</a>
+  </li>
+</ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 text-center">
+                        <ul class="footerList">
+    <li class="footerList_item">
+        <div>Supported by</div>
+    </li>
+    <li class="footerList_item">
+            <a href="https://opencollective.com/yiisoft" aria-label="OpenCollective" target="_blank" rel="noopener
+            noreferrer"><img alt="OpenCollective" height="40" src="../../../../../../../image/collective.png"></a>
+    </li>
+    <li class="footerList_item">
+        <a href="https://www.jetbrains.com/?from=yii" aria-label="JetBrains website" target="_blank" rel="noopener
+        noreferrer"><img alt="JetBrains logo" width="80" src="../../../../../../../image/jetbrains.svg"></a>
+    </li>
+</ul>
+
+
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</div>
+
+        </div> <!-- close the id="page-wrapper" -->
+
+        <script src="../../../../../../../assets/84e61ab0/js/all.mina079.js?v=1664835330"></script>
+<script>jQuery(function ($) {
+
+  $('[data-toggle="offcanvas"]').click(function () {
+    $('.row-offcanvas').toggleClass('active')
+  });
+
+});</script>    
+
+<!-- Mirrored from www.yiiframework.com/extension/yiisoft/yii2-bootstrap/doc/guide/2.0/en/usage-widgets by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 07 Dec 2022 14:52:31 GMT -->
+
+</body></html>

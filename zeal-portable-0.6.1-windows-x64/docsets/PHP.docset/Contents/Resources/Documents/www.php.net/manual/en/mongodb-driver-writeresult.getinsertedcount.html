@@ -1,0 +1,286 @@
+<html><!-- Mirrored from www.php.net/manual/en/mongodb-driver-writeresult.getinsertedcount.php by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 15 Nov 2022 08:30:01 GMT --><!-- Added by HTTrack --><head><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>MongoDB\Driver\WriteResult::getInsertedCount</title>
+
+ <link rel="icon" type="image/svg+xml" sizes="any" href="../../favicon5e1f.svg?v=2">
+ <link rel="icon" type="image/png" sizes="196x196" href="../../favicon-196x1965e1f.png?v=2">
+ <link rel="icon" type="image/png" sizes="32x32" href="../../favicon-32x325e1f.png?v=2">
+ <link rel="icon" type="image/png" sizes="16x16" href="../../favicon-16x165e1f.png?v=2">
+ <link rel="shortcut icon" href="../../favicon5e1f.ico?v=2">
+
+ <link rel="search" type="application/opensearchdescription+xml" href="http://php.net/phpnetimprovedsearch.src" title="Add PHP.net search">
+ <link rel="alternate" type="application/atom+xml" href="https://www.php.net/releases/feed.php" title="PHP Release feed">
+ <link rel="alternate" type="application/atom+xml" href="https://www.php.net/feed.atom" title="PHP: Hypertext Preprocessor">
+
+ <link rel="canonical" href="mongodb-driver-writeresult.getinsertedcount.html">
+ <link rel="shorturl" href="mongodb-driver-writeresult.getinsertedcount.html">
+ <link rel="alternate" href="mongodb-driver-writeresult.getinsertedcount.html" hreflang="x-default">
+
+ <link rel="contents" href="index-2.html">
+ <link rel="index" href="class.mongodb-driver-writeresult.html">
+ <link rel="prev" href="mongodb-driver-writeresult.getdeletedcount.html">
+ <link rel="next" href="mongodb-driver-writeresult.getmatchedcount.html">
+
+ <link rel="alternate" href="mongodb-driver-writeresult.getinsertedcount.html" hreflang="en">
+ <link rel="alternate" href="https://www.php.net/manual/pt_BR/mongodb-driver-writeresult.getinsertedcount.php" hreflang="pt_BR">
+ <link rel="alternate" href="https://www.php.net/manual/zh/mongodb-driver-writeresult.getinsertedcount.php" hreflang="zh">
+ <link rel="alternate" href="https://www.php.net/manual/fr/mongodb-driver-writeresult.getinsertedcount.php" hreflang="fr">
+ <link rel="alternate" href="https://www.php.net/manual/de/mongodb-driver-writeresult.getinsertedcount.php" hreflang="de">
+ <link rel="alternate" href="https://www.php.net/manual/ja/mongodb-driver-writeresult.getinsertedcount.php" hreflang="ja">
+ <link rel="alternate" href="https://www.php.net/manual/ru/mongodb-driver-writeresult.getinsertedcount.php" hreflang="ru">
+ <link rel="alternate" href="https://www.php.net/manual/es/mongodb-driver-writeresult.getinsertedcount.php" hreflang="es">
+ <link rel="alternate" href="https://www.php.net/manual/tr/mongodb-driver-writeresult.getinsertedcount.php" hreflang="tr">
+
+<link rel="stylesheet" type="text/css" href="../../cachedbb46.css?t=1639034403&amp;f=/fonts/Fira/fira.css" media="screen">
+<link rel="stylesheet" type="text/css" href="../../cached2ecf.css?t=1539765004&amp;f=/fonts/Font-Awesome/css/fontello.css" media="screen">
+<link rel="stylesheet" type="text/css" href="../../cachedfc49.css?t=1666008602&amp;f=/styles/theme-base.css" media="screen">
+<link rel="stylesheet" type="text/css" href="../../cached8f0d.css?t=1666013403&amp;f=/styles/theme-medium.css" media="screen">
+
+ <base>
+
+
+</head>
+<body class="docs " style="">
+
+
+<div class="headsup"><a href="https://www.php.net/index.php#2022-11-10-1">PHP 8.2.0 RC 6 available for testing</a></div>
+<nav id="trick"><div><dl>
+<dt><a href="getting-started.html">Getting Started</a></dt>
+	<dd><a href="introduction.html">Introduction</a></dd>
+	<dd><a href="tutorial.html">A simple tutorial</a></dd>
+<dt><a href="langref.html">Language Reference</a></dt>
+	<dd><a href="language.basic-syntax.html">Basic syntax</a></dd>
+	<dd><a href="language.types.html">Types</a></dd>
+	<dd><a href="language.variables.html">Variables</a></dd>
+	<dd><a href="language.constants.html">Constants</a></dd>
+	<dd><a href="language.expressions.html">Expressions</a></dd>
+	<dd><a href="language.operators.html">Operators</a></dd>
+	<dd><a href="language.control-structures.html">Control Structures</a></dd>
+	<dd><a href="language.functions.html">Functions</a></dd>
+	<dd><a href="language.oop5.html">Classes and Objects</a></dd>
+	<dd><a href="language.namespaces.html">Namespaces</a></dd>
+	<dd><a href="language.enumerations.html">Enumerations</a></dd>
+	<dd><a href="language.errors.html">Errors</a></dd>
+	<dd><a href="language.exceptions.html">Exceptions</a></dd>
+	<dd><a href="language.fibers.html">Fibers</a></dd>
+	<dd><a href="language.generators.html">Generators</a></dd>
+	<dd><a href="language.attributes.html">Attributes</a></dd>
+	<dd><a href="language.references.html">References Explained</a></dd>
+	<dd><a href="reserved.variables.html">Predefined Variables</a></dd>
+	<dd><a href="reserved.exceptions.html">Predefined Exceptions</a></dd>
+	<dd><a href="reserved.interfaces.html">Predefined Interfaces and Classes</a></dd>
+	<dd><a href="reserved.attributes.html">Predefined Attributes</a></dd>
+	<dd><a href="context.html">Context options and parameters</a></dd>
+	<dd><a href="wrappers.html">Supported Protocols and Wrappers</a></dd>
+</dl>
+<dl>
+<dt><a href="security.html">Security</a></dt>
+	<dd><a href="security.intro.html">Introduction</a></dd>
+	<dd><a href="security.general.html">General considerations</a></dd>
+	<dd><a href="security.cgi-bin.html">Installed as CGI binary</a></dd>
+	<dd><a href="security.apache.html">Installed as an Apache module</a></dd>
+	<dd><a href="security.sessions.html">Session Security</a></dd>
+	<dd><a href="security.filesystem.html">Filesystem Security</a></dd>
+	<dd><a href="security.database.html">Database Security</a></dd>
+	<dd><a href="security.errors.html">Error Reporting</a></dd>
+	<dd><a href="security.variables.html">User Submitted Data</a></dd>
+	<dd><a href="security.hiding.html">Hiding PHP</a></dd>
+	<dd><a href="security.current.html">Keeping Current</a></dd>
+<dt><a href="features.html">Features</a></dt>
+	<dd><a href="features.http-auth.html">HTTP authentication with PHP</a></dd>
+	<dd><a href="features.cookies.html">Cookies</a></dd>
+	<dd><a href="features.sessions.html">Sessions</a></dd>
+	<dd><a href="features.xforms.html">Dealing with XForms</a></dd>
+	<dd><a href="features.file-upload.html">Handling file uploads</a></dd>
+	<dd><a href="features.remote-files.html">Using remote files</a></dd>
+	<dd><a href="features.connection-handling.html">Connection handling</a></dd>
+	<dd><a href="features.persistent-connections.html">Persistent Database Connections</a></dd>
+	<dd><a href="features.commandline.html">Command line usage</a></dd>
+	<dd><a href="features.gc.html">Garbage Collection</a></dd>
+	<dd><a href="features.dtrace.html">DTrace Dynamic Tracing</a></dd>
+</dl>
+<dl>
+<dt><a href="funcref.html">Function Reference</a></dt>
+	<dd><a href="refs.basic.php.html">Affecting PHP's Behaviour</a></dd>
+	<dd><a href="refs.utilspec.audio.html">Audio Formats Manipulation</a></dd>
+	<dd><a href="refs.remote.auth.html">Authentication Services</a></dd>
+	<dd><a href="refs.utilspec.cmdline.html">Command Line Specific Extensions</a></dd>
+	<dd><a href="refs.compression.html">Compression and Archive Extensions</a></dd>
+	<dd><a href="refs.crypto.html">Cryptography Extensions</a></dd>
+	<dd><a href="refs.database.html">Database Extensions</a></dd>
+	<dd><a href="refs.calendar.html">Date and Time Related Extensions</a></dd>
+	<dd><a href="refs.fileprocess.file.html">File System Related Extensions</a></dd>
+	<dd><a href="refs.international.html">Human Language and Character Encoding Support</a></dd>
+	<dd><a href="refs.utilspec.image.html">Image Processing and Generation</a></dd>
+	<dd><a href="refs.remote.mail.html">Mail Related Extensions</a></dd>
+	<dd><a href="refs.math.html">Mathematical Extensions</a></dd>
+	<dd><a href="refs.utilspec.nontext.html">Non-Text MIME Output</a></dd>
+	<dd><a href="refs.fileprocess.process.html">Process Control Extensions</a></dd>
+	<dd><a href="refs.basic.other.html">Other Basic Extensions</a></dd>
+	<dd><a href="refs.remote.other.html">Other Services</a></dd>
+	<dd><a href="refs.search.html">Search Engine Extensions</a></dd>
+	<dd><a href="refs.utilspec.server.html">Server Specific Extensions</a></dd>
+	<dd><a href="refs.basic.session.html">Session Extensions</a></dd>
+	<dd><a href="refs.basic.text.html">Text Processing</a></dd>
+	<dd><a href="refs.basic.vartype.html">Variable and Type Related Extensions</a></dd>
+	<dd><a href="refs.webservice.html">Web Services</a></dd>
+	<dd><a href="refs.utilspec.windows.html">Windows Only Extensions</a></dd>
+	<dd><a href="refs.xml.html">XML Manipulation</a></dd>
+	<dd><a href="refs.ui.html">GUI Extensions</a></dd>
+</dl>
+<dl>
+<dt>Keyboard Shortcuts</dt><dt>?</dt>
+<dd>This help</dd>
+<dt>j</dt>
+<dd>Next menu item</dd>
+<dt>k</dt>
+<dd>Previous menu item</dd>
+<dt>g p</dt>
+<dd>Previous man page</dd>
+<dt>g n</dt>
+<dd>Next man page</dd>
+<dt>G</dt>
+<dd>Scroll to bottom</dd>
+<dt>g g</dt>
+<dd>Scroll to top</dd>
+<dt>g h</dt>
+<dd>Goto homepage</dd>
+<dt>g s</dt>
+<dd>Goto search<br>(current page)</dd>
+<dt>/</dt>
+<dd>Focus search box</dd>
+</dl></div></nav>
+<div id="goto">
+    <div class="search">
+         <div class="text"></div>
+         <div class="results"><ul></ul></div>
+   </div>
+</div>
+
+  <div id="breadcrumbs" class="row-fluid">
+    <div id="breadcrumbs-inner">
+          
+              
+          <ul>
+            <li><a href="index-2.html">PHP Manual</a></li>      <li><a href="funcref.html">Function Reference</a></li>      <li><a href="refs.database.html">Database Extensions</a></li>      <li><a href="refs.database.vendors.html">Vendor Specific Database Extensions</a></li>      <li><a href="set.mongodb.html">MongoDB</a></li>      <li><a href="book.mongodb.html">MongoDB\Driver</a></li>      <li><a href="class.mongodb-driver-writeresult.html">MongoDB\Driver\WriteResult</a></li>      </ul>
+    </div>
+  </div>
+
+
+
+
+<div id="layout" class="clearfix">
+  <section id="layout-content">
+  <div id="mongodb-driver-writeresult.getinsertedcount" class="refentry">
+ <div class="refnamediv">
+  <h1 class="refname">MongoDB\Driver\WriteResult::getInsertedCount</h1>
+  <p class="verinfo">(mongodb &gt;=1.0.0)</p><p class="refpurpose"><span class="refname">MongoDB\Driver\WriteResult::getInsertedCount</span> — <span class="dc-title">Returns the number of documents inserted (excluding upserts)</span></p>
+
+ </div>
+
+ <div class="refsect1 description" id="refsect1-mongodb-driver-writeresult.getinsertedcount-description">
+  <h3 class="title">Description</h3>
+  <div class="methodsynopsis dc-description">
+   <span class="modifier">final</span> <span class="modifier">public</span> <span class="methodname"><strong>MongoDB\Driver\WriteResult::getInsertedCount</strong></span>(): <span class="type"><span class="type">?</span><span class="type">int</span></span></div>
+
+  <p class="para rdfs-comment">
+
+  </p>
+
+ </div>
+
+
+ <div class="refsect1 parameters" id="refsect1-mongodb-driver-writeresult.getinsertedcount-parameters">
+  <h3 class="title">Parameters</h3>
+  <p class="para">This function has no parameters.</p>
+ </div>
+
+
+ <div class="refsect1 returnvalues" id="refsect1-mongodb-driver-writeresult.getinsertedcount-returnvalues">
+  <h3 class="title">Return Values</h3>
+  <p class="para">
+   Returns the number of documents inserted (excluding upserts), or <strong><code>null</code></strong> if
+   the write was not acknowledged.
+  </p>
+ </div>
+
+
+ <div class="refsect1 errors" id="refsect1-mongodb-driver-writeresult.getinsertedcount-errors">
+  <h3 class="title">Errors/Exceptions</h3>
+  <ul class="simplelist">
+   <li class="member">Throws <span class="classname"><a href="class.mongodb-driver-exception-invalidargumentexception.html" class="classname">MongoDB\Driver\Exception\InvalidArgumentException</a></span> on argument parsing errors.</li>
+  </ul>
+ </div>
+
+
+
+ <div class="refsect1 examples" id="refsect1-mongodb-driver-writeresult.getinsertedcount-examples">
+  <h3 class="title">Examples</h3>
+  <div class="example" id="example-1362">
+   <p><strong>Example #1 <span class="function"><strong>MongoDB\Driver\WriteResult::getInsertedCount()</strong></span> example</strong></p>
+   <div class="example-contents">
+<div class="phpcode"><code><span style="color: #000000">
+<span style="color: #0000BB">&lt;?php<br><br>$manager&nbsp;</span><span style="color: #007700">=&nbsp;new&nbsp;</span><span style="color: #0000BB">MongoDB</span><span style="color: #007700">\</span><span style="color: #0000BB">Driver</span><span style="color: #007700">\</span><span style="color: #0000BB">Manager</span><span style="color: #007700">;<br><br></span><span style="color: #0000BB">$bulk&nbsp;</span><span style="color: #007700">=&nbsp;new&nbsp;</span><span style="color: #0000BB">MongoDB</span><span style="color: #007700">\</span><span style="color: #0000BB">Driver</span><span style="color: #007700">\</span><span style="color: #0000BB">BulkWrite</span><span style="color: #007700">;<br></span><span style="color: #0000BB">$bulk</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">insert</span><span style="color: #007700">([</span><span style="color: #DD0000">'x'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #0000BB">1</span><span style="color: #007700">]);<br></span><span style="color: #0000BB">$bulk</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">update</span><span style="color: #007700">([</span><span style="color: #DD0000">'x'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #0000BB">1</span><span style="color: #007700">],&nbsp;[</span><span style="color: #DD0000">'$set'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;[</span><span style="color: #DD0000">'y'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #0000BB">3</span><span style="color: #007700">]]);<br></span><span style="color: #0000BB">$bulk</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">update</span><span style="color: #007700">([</span><span style="color: #DD0000">'x'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #0000BB">2</span><span style="color: #007700">],&nbsp;[</span><span style="color: #DD0000">'$set'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;[</span><span style="color: #DD0000">'y'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #0000BB">1</span><span style="color: #007700">]],&nbsp;[</span><span style="color: #DD0000">'upsert'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #0000BB">true</span><span style="color: #007700">]);<br></span><span style="color: #0000BB">$bulk</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">update</span><span style="color: #007700">([</span><span style="color: #DD0000">'x'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #0000BB">3</span><span style="color: #007700">],&nbsp;[</span><span style="color: #DD0000">'$set'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;[</span><span style="color: #DD0000">'y'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #0000BB">2</span><span style="color: #007700">]],&nbsp;[</span><span style="color: #DD0000">'upsert'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #0000BB">true</span><span style="color: #007700">]);<br></span><span style="color: #0000BB">$bulk</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">delete</span><span style="color: #007700">([</span><span style="color: #DD0000">'x'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #0000BB">1</span><span style="color: #007700">]);<br><br></span><span style="color: #0000BB">$result&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">$manager</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">executeBulkWrite</span><span style="color: #007700">(</span><span style="color: #DD0000">'db.collection'</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">$bulk</span><span style="color: #007700">);<br><br></span><span style="color: #0000BB">var_dump</span><span style="color: #007700">(</span><span style="color: #0000BB">$result</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">getInsertedCount</span><span style="color: #007700">());<br><br></span><span style="color: #0000BB">?&gt;</span>
+</span>
+</code></div>
+   </div>
+
+   <div class="example-contents"><p>The above example will output:</p></div>
+   <div class="example-contents screen">
+<div class="cdata"><pre>int(1)
+</pre></div>
+   </div>
+  </div>
+ </div>
+
+
+
+ <div class="refsect1 seealso" id="refsect1-mongodb-driver-writeresult.getinsertedcount-seealso">
+  <h3 class="title">See Also</h3>
+  <ul class="simplelist">
+   <li class="member"><span class="methodname"><a href="mongodb-driver-writeresult.isacknowledged.html" class="methodname" rel="rdfs-seeAlso">MongoDB\Driver\WriteResult::isAcknowledged()</a> - Returns whether the write was acknowledged</span></li>
+  </ul>
+ </div>
+
+
+</div><section id="usernotes">
+ <div class="head"><h3 class="title">User Contributed Notes</h3></div><div id="allnotes">
+  <div class="note" id="123387">  
+  <a class="name">
+  <strong class="user"><em>noam</em></strong></a><div class="date" title="2018-11-29 05:31"><strong>3 years ago</strong></div>
+  <div class="text" id="Hcom123387">
+<div class="phpcode"><code><span class="html">
+In case you are trying to add an index to a collection, and the index is already there, the value of getInsertedCount() depends on the MongoDB server version.<br>For example, MongoDB version 2.4 consider the index as inserted, but version 3.6 does not.</span>
+</code></div>
+  </div>
+ </div></div>
+
+</section>    </section><!-- layout-content -->
+        
+
+
+  </div><!-- layout -->
+
+  
+
+    
+ <!-- External and third party libraries. -->
+ 
+
+
+
+
+
+
+
+<a id="toTop" href="javascript:;"><span id="toTopHover"></span><img width="40" height="40" alt="To Top" src="../../images/to-top%402x.png"></a>
+
+
+
+<!-- Mirrored from www.php.net/manual/en/mongodb-driver-writeresult.getinsertedcount.php by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 15 Nov 2022 08:30:01 GMT -->
+
+</body></html>

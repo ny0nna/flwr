@@ -1,0 +1,1136 @@
+<html><!-- Mirrored from www.yiiframework.com/extension/yiisoft/yii2-elasticsearch/doc/api/2.0/yii-elasticsearch-elasticsearchtarget by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 07 Dec 2022 15:05:40 GMT --><!-- Added by HTTrack --><head><meta http-equiv="content-type" content="text/html;charset=UTF-8"><!-- /Added by HTTrack -->
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../../../../favico/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../../../../../../favico/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../../../../../../favico/favicon-16x16.png">
+        <link rel="icon" type="image/svg+xml" href="../../../../../../favico/favicon.svg">
+        <link rel="icon" type="image/png" href="../../../../../../favico/favicon.png">
+        <link rel="shortcut icon" href="../../../../../../favico/favicon.ico">
+        <link rel="manifest" href="../../../../../../favico/manifest.json">
+        <link rel="mask-icon" href="../../../../../../favico/safari-pinned-tab.svg" color="#1e6887">
+        <meta name="msapplication-config" content="https://www.yiiframework.com/favico/browserconfig.xml">
+        <meta name="theme-color" content="#1e6887">
+
+        <link href="https://www.yiiframework.com/rss.xml" type="application/rss+xml" rel="alternate" title="Lives News for Yii Framework">
+
+        <meta name="csrf-param" content="_csrf">
+<meta name="csrf-token" content="bxPgazXfDzL5QW4KIREhO2T3-anczscXqb1T1jblpWkNYNQkbOdjArElBVVwZllzIqCX0Le9onrw9jugD6fUIg==">
+        
+        <title>Class yii\elasticsearch\ElasticsearchTarget</title>
+
+        <meta property="og:site_name" content="Yii Framework">
+        <meta property="og:title" content="ElasticsearchTarget, yii\elasticsearch\ElasticsearchTarget">
+        <meta property="og:image" content="../../../../../../image/facebook_cover.png">
+        <meta property="og:url" content="/extension/yiisoft/yii2-elasticsearch/doc/api/2.0/yii-elasticsearch-elasticsearchtarget">
+        <meta property="og:description" content="">
+
+        <meta name="twitter:card" content="summary">
+        <meta name="twitter:site" content="yiiframework">
+        <meta name="twitter:title" content="ElasticsearchTarget, yii\elasticsearch\ElasticsearchTarget">
+        <meta name="twitter:description" content="">
+        <meta name="twitter:image" content="../../../../../../image/twitter_cover.png">
+        <meta name="twitter:image:width" content="120">
+        <meta name="twitter:image:height" content="120">
+
+        <link type="application/opensearchdescription+xml" href="https://www.yiiframework.com/opensearch.xml" title="Yii Search" rel="search">
+<link href="../../../../../../assets/84e61ab0/css/all.mina079.css?v=1664835330" rel="stylesheet">
+<script>yiiBaseUrl = ""
+yiiSearchVersion = "2.0"</script>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-707ZP35KCT"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-707ZP35KCT');
+</script>
+    </head>
+    <body data-spy="scroll" data-target="#scrollnav" data-offset="1">
+        
+        <div id="page-wrapper" class="">
+
+            <header class="navbar navbar-inverse navbar-static" id="top">
+    <div class="container">
+        <div id="main-nav-head" class="navbar-header">
+            <a href="https://www.yiiframework.com/" class="navbar-brand">
+                <img src="../../../../../../image/logo.svg" alt="Yii PHP Framework" width="165" height="35">
+            </a>
+            <button type="button" class="navbar-toggle" data-toggle="collapse" aria-label="Toggle navigation" data-target=".navbar-collapse"><i class="fa fa-inverse fa-bars"></i></button>
+        </div>
+
+        <div class="navbar-collapse collapse navbar-right">
+            <ul id="main-nav" class="nav navbar-nav navbar-main-menu nav"><li title="The Definitive Guide to Yii"><a href="../../../../../../doc/guide/2.0/en.html">Guide</a></li>
+<li class="active" title="API Documentation"><a href="../../../../../../doc/api/2.html">API</a></li>
+<li title="Community Wiki"><a href="https://www.yiiframework.com/wiki">Wiki</a></li>
+<li title="Community Forum"><a href="https://www.yiiframework.com/forum">Forum</a></li>
+<li class="dropdown active"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Community <span class="caret"></span></a><ul id="w0" class="dropdown-menu"><li><a href="https://www.yiiframework.com/chat" tabindex="-1">Live Chat</a></li>
+<li class="active" title="Extensions"><a href="https://www.yiiframework.com/extensions" tabindex="-1">Extensions</a></li>
+<li><a href="https://www.yiiframework.com/community" tabindex="-1">Resources</a></li>
+<li title="Community Members"><a href="https://www.yiiframework.com/user" tabindex="-1">Members</a></li>
+<li title="Community Hall of Fame"><a href="https://www.yiiframework.com/user/halloffame" tabindex="-1">Hall of Fame</a></li>
+<li title="Community Badges"><a href="https://www.yiiframework.com/badges" tabindex="-1">Badges</a></li></ul></li>
+<li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">More <span class="caret"></span></a><ul id="w1" class="dropdown-menu"><li class="separator dropdown-header">Learn</li>
+<li><a href="https://www.yiiframework.com/books" tabindex="-1">Books</a></li>
+<li><a href="https://www.yiiframework.com/resources" tabindex="-1">Resources</a></li>
+<li class="separator dropdown-header">Develop</li>
+<li><a href="https://www.yiiframework.com/download" tabindex="-1">Download Yii</a></li>
+<li><a href="https://www.yiiframework.com/report-issue" tabindex="-1">Report an Issue</a></li>
+<li><a href="https://www.yiiframework.com/security" tabindex="-1">Report a Security Issue</a></li>
+<li><a href="https://www.yiiframework.com/contribute" tabindex="-1">Contribute to Yii</a></li>
+<li><a href="https://www.yiiframework.com/donate" tabindex="-1">Donate</a></li>
+<li class="separator dropdown-header">About</li>
+<li><a href="../../../../../../doc/guide/2.0/en/intro-yii.html" tabindex="-1">What is Yii?</a></li>
+<li><a href="https://www.yiiframework.com/release-cycle" tabindex="-1">Release Cycle</a></li>
+<li><a href="https://www.yiiframework.com/news" tabindex="-1">News</a></li>
+<li><a href="https://www.yiiframework.com/license" tabindex="-1">License</a></li>
+<li><a href="https://www.yiiframework.com/team" tabindex="-1">Team</a></li>
+<li><a href="https://www.yiiframework.com/logo" tabindex="-1">Official Logos and Design</a></li></ul></li></ul>
+            
+            <div class="nav navbar-nav navbar-right">
+                <ul id="login-nav" class="nav navbar-nav navbar-main-menu nav"><li><a href="https://www.yiiframework.com/login">Login</a></li></ul>            </div>
+
+            <div class="nav navbar-nav navbar-right">
+                        <form id="search-form" class="navbar-form" action="https://www.yiiframework.com/search" method="get">
+<input type="hidden" name="version" value="2.0">
+<input type="hidden" name="type" value="api">        <div class="form-group nospace">
+            <div class="input-group">
+                <input type="text" class="form-control" id="search" name="q" placeholder="Search API…" autocomplete="off" value="">
+            </div>
+        </div>
+        <div id="search-resultbox"></div>
+        </form>            </div>
+
+            
+        </div>
+    </div>
+</header>
+
+            <div class="section-header-wrap">
+    <div class="container section-header lang-en">
+        <div class="row headline-row">
+            <div class="col-xs-12 col-md-12">
+                <div class="section-headline"><a href="../../../../yii2-elasticsearch.html">yiisoft/yii2-elasticsearch</a> - <a href="../2.html">API Documentation</a></div>
+            </div>
+                    </div>
+                <div class="row content-selector-row">
+            <div class="col-xs-12 col-md-offset-7 col-md-5">
+                <nav class="version-selector" role="navigation">
+    <div class="btn-group btn-group-justified btn-group-2-element">
+	    
+                <div class="btn-group btn-group-sm"><button class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Version 2.0 <span class="caret"></span></button><ul class="dropdown-menu" role="menu"><li role="presentation"><a href="https://www.yiiframework.com/extension/yiisoft/yii2-elasticsearch/doc/api/2.1/yii-elasticsearch-elasticsearchtarget" role="menuitem" tabindex="-1">2.1</a></li></ul></div>    </div>
+</nav>
+            </div>
+        </div>
+            </div>
+</div>
+
+                        <div class="container api-content">
+    <div class="row visible-xs">
+        <div class="col-md-12">
+            <p class="pull-right topmost">
+                <button type="button" title="Toggle Side-Nav" class="btn btn-primary btn-xs" data-toggle="offcanvas">SideNav</button>
+            </p>
+        </div>
+    </div>
+
+	<div class="row row-offcanvas">
+    <div class="col-sm-3 col-md-3 col-lg-3">
+                <div id="api-navigation" class="sidenav-offcanvas"><a class="list-group-item has-children active" href="#" data-toggle="collapse" data-parent="#api-navigation" data-target="#api-navigation-8"><span class="api-ns-level-0">yii\</span>elasticsearch</a><div id="api-navigation-8" class="submenu panel-collapse collapse in active-parent"><a class="list-group-item" href="yii-elasticsearch-activedataprovider.html">ActiveDataProvider</a>
+<a class="list-group-item" href="yii-elasticsearch-activefixture.html">ActiveFixture</a>
+<a class="list-group-item" href="yii-elasticsearch-activequery.html">ActiveQuery</a>
+<a class="list-group-item" href="yii-elasticsearch-activerecord.html">ActiveRecord</a>
+<a class="list-group-item" href="yii-elasticsearch-batchqueryresult.html">BatchQueryResult</a>
+<a class="list-group-item" href="yii-elasticsearch-bulkcommand.html">BulkCommand</a>
+<a class="list-group-item" href="yii-elasticsearch-command.html">Command</a>
+<a class="list-group-item" href="yii-elasticsearch-connection.html">Connection</a>
+<a class="list-group-item" href="yii-elasticsearch-debugaction.html">DebugAction</a>
+<a class="list-group-item" href="yii-elasticsearch-debugpanel.html">DebugPanel</a>
+<a class="list-group-item active" href="yii-elasticsearch-elasticsearchtarget.html">ElasticsearchTarget</a>
+<a class="list-group-item" href="yii-elasticsearch-exception.html">Exception</a>
+<a class="list-group-item" href="yii-elasticsearch-query.html">Query</a>
+<a class="list-group-item" href="yii-elasticsearch-querybuilder.html">QueryBuilder</a></div></div>    </div>
+    <div class="col-sm-9 col-md-9 col-lg-9" role="main">
+        
+        <div class="content">
+        <h1>Class yii\elasticsearch\ElasticsearchTarget</h1>
+<div class="top-nav">
+    <a href="index.html">All Classes</a>
+            | <a href="#properties">Properties</a>
+                | <a href="#methods">Methods</a>
+            </div>
+
+<table class="summaryTable docClass table table-bordered">
+    <colgroup>
+        <col class="col-name">
+        <col class="col-value">
+    </colgroup>
+            <tbody><tr><th>Inheritance</th><td><a href="yii-elasticsearch-elasticsearchtarget.html">yii\elasticsearch\ElasticsearchTarget</a> »
+yii\log\Target</td></tr>
+                                        <tr><th>Available since extension's version</th><td>2.0.5</td></tr>
+                    <tr>
+          <th>Source Code</th>
+          <td><a href="https://github.com/yiisoft/yii2-elasticsearch/blob/master/ElasticsearchTarget.php">https://github.com/yiisoft/yii2-elasticsearch/blob/master/ElasticsearchTarget.php</a></td>
+        </tr>
+    </tbody></table>
+
+<div class="class-description">
+    <p><strong>ElasticsearchTarget stores log messages in a elasticsearch index.</strong></p>
+    
+    </div>
+
+
+
+<a id="properties"></a>
+
+<div class="doc-property summary toggle-target-container">
+    <h2>Public Properties</h2>
+
+    <p><a href="#" class="toggle">Hide inherited properties</a></p>
+
+    <table class="summary-table table table-striped table-bordered table-hover">
+        <colgroup>
+            <col class="col-property">
+            <col class="col-type">
+            <col class="col-description">
+            <col class="col-defined">
+        </colgroup>
+        <tbody><tr>
+            <th>Property</th>
+            <th>Type</th>
+            <th>Description</th>
+            <th>Defined By</th>
+        </tr>
+
+                                    <tr id="$_contextMessage" class="">
+                    <td><a href="yii-elasticsearch-elasticsearchtarget.html#$_contextMessage-detail">$_contextMessage</a></td>
+                    <td><a href="https://www.php.net/language.types.string">string</a></td>
+                    <td>Context message cache (can be used multiple times if context is appended to every message)</td>
+                    <td><a href="yii-elasticsearch-elasticsearchtarget.html">yii\elasticsearch\ElasticsearchTarget</a></td>
+                </tr>
+                                                <tr id="$cacheContext" class="">
+                    <td><a href="yii-elasticsearch-elasticsearchtarget.html#$cacheContext-detail">$cacheContext</a></td>
+                    <td><a href="https://www.php.net/language.types.boolean">boolean</a></td>
+                    <td>If true, context message will cached once it's been created.</td>
+                    <td><a href="yii-elasticsearch-elasticsearchtarget.html">yii\elasticsearch\ElasticsearchTarget</a></td>
+                </tr>
+                                                <tr id="$db" class="">
+                    <td><a href="yii-elasticsearch-elasticsearchtarget.html#$db-detail">$db</a></td>
+                    <td><a href="yii-elasticsearch-connection.html">yii\elasticsearch\Connection</a>|<a href="https://www.php.net/language.types.array">array</a>|<a href="https://www.php.net/language.types.string">string</a></td>
+                    <td>The elasticsearch connection object or the application component ID of the elasticsearch connection.</td>
+                    <td><a href="yii-elasticsearch-elasticsearchtarget.html">yii\elasticsearch\ElasticsearchTarget</a></td>
+                </tr>
+                                                <tr id="$includeContext" class="">
+                    <td><a href="yii-elasticsearch-elasticsearchtarget.html#$includeContext-detail">$includeContext</a></td>
+                    <td><a href="https://www.php.net/language.types.boolean">boolean</a></td>
+                    <td>If true, context will be included in every message.</td>
+                    <td><a href="yii-elasticsearch-elasticsearchtarget.html">yii\elasticsearch\ElasticsearchTarget</a></td>
+                </tr>
+                                                <tr id="$index" class="">
+                    <td><a href="yii-elasticsearch-elasticsearchtarget.html#$index-detail">$index</a></td>
+                    <td><a href="https://www.php.net/language.types.string">string</a></td>
+                    <td>Elasticsearch index name.</td>
+                    <td><a href="yii-elasticsearch-elasticsearchtarget.html">yii\elasticsearch\ElasticsearchTarget</a></td>
+                </tr>
+                                                <tr id="$logContext" class="">
+                    <td><a href="yii-elasticsearch-elasticsearchtarget.html#$logContext-detail">$logContext</a></td>
+                    <td><a href="https://www.php.net/language.types.boolean">boolean</a></td>
+                    <td>If true, context will be logged as a separate message after all other messages.</td>
+                    <td><a href="yii-elasticsearch-elasticsearchtarget.html">yii\elasticsearch\ElasticsearchTarget</a></td>
+                </tr>
+                                                <tr id="$options" class="">
+                    <td><a href="yii-elasticsearch-elasticsearchtarget.html#$options-detail">$options</a></td>
+                    <td><a href="https://www.php.net/language.types.array">array</a></td>
+                    <td>URL options.</td>
+                    <td><a href="yii-elasticsearch-elasticsearchtarget.html">yii\elasticsearch\ElasticsearchTarget</a></td>
+                </tr>
+                                                <tr id="$type" class="">
+                    <td><a href="yii-elasticsearch-elasticsearchtarget.html#$type-detail">$type</a></td>
+                    <td><a href="https://www.php.net/language.types.string">string</a></td>
+                    <td>Elasticsearch type name.</td>
+                    <td><a href="yii-elasticsearch-elasticsearchtarget.html">yii\elasticsearch\ElasticsearchTarget</a></td>
+                </tr>
+                        </tbody></table>
+</div>
+
+<div class="doc-property summary toggle-target-container">
+    <h2>Protected Properties</h2>
+
+    <p><a href="#" class="toggle">Hide inherited properties</a></p>
+
+    <table class="summary-table table table-striped table-bordered table-hover">
+        <colgroup>
+            <col class="col-property">
+            <col class="col-type">
+            <col class="col-description">
+            <col class="col-defined">
+        </colgroup>
+        <tbody><tr>
+            <th>Property</th>
+            <th>Type</th>
+            <th>Description</th>
+            <th>Defined By</th>
+        </tr>
+
+                                                                                                                                                                            </tbody></table>
+</div>
+
+<a id="methods"></a>
+
+<div class="doc-method summary toggle-target-container">
+    <h2>Public Methods</h2>
+
+    <p><a href="#" class="toggle">Hide inherited methods</a></p>
+
+    <table class="summary-table table table-striped table-bordered table-hover">
+        <colgroup>
+            <col class="col-method">
+            <col class="col-description">
+            <col class="col-defined">
+        </colgroup>
+        <tbody><tr>
+            <th>Method</th>
+            <th>Description</th>
+            <th>Defined By</th>
+        </tr>
+
+                                    <tr id="collect()" class="">
+                    <td><a href="yii-elasticsearch-elasticsearchtarget.html#collect()-detail">collect()</a></td>
+                    <td>Processes the given log messages.</td>
+                    <td><a href="yii-elasticsearch-elasticsearchtarget.html">yii\elasticsearch\ElasticsearchTarget</a></td>
+                </tr>
+                                                <tr id="export()" class="">
+                    <td><a href="yii-elasticsearch-elasticsearchtarget.html#export()-detail">export()</a></td>
+                    <td></td>
+                    <td><a href="yii-elasticsearch-elasticsearchtarget.html">yii\elasticsearch\ElasticsearchTarget</a></td>
+                </tr>
+                                                                    <tr id="init()" class="">
+                    <td><a href="yii-elasticsearch-elasticsearchtarget.html#init()-detail">init()</a></td>
+                    <td>This method will initialize the <span class="broken-link">elasticsearch</span> property to make sure it refers to a valid Elasticsearch connection.</td>
+                    <td><a href="yii-elasticsearch-elasticsearchtarget.html">yii\elasticsearch\ElasticsearchTarget</a></td>
+                </tr>
+                                                <tr id="prepareMessage()" class="">
+                    <td><a href="yii-elasticsearch-elasticsearchtarget.html#prepareMessage()-detail">prepareMessage()</a></td>
+                    <td>Prepares a log message.</td>
+                    <td><a href="yii-elasticsearch-elasticsearchtarget.html">yii\elasticsearch\ElasticsearchTarget</a></td>
+                </tr>
+                        </tbody></table>
+</div>
+
+<div class="doc-method summary toggle-target-container">
+    <h2>Protected Methods</h2>
+
+    <p><a href="#" class="toggle">Hide inherited methods</a></p>
+
+    <table class="summary-table table table-striped table-bordered table-hover">
+        <colgroup>
+            <col class="col-method">
+            <col class="col-description">
+            <col class="col-defined">
+        </colgroup>
+        <tbody><tr>
+            <th>Method</th>
+            <th>Description</th>
+            <th>Defined By</th>
+        </tr>
+
+                                                                            <tr id="getContextMessage()" class="">
+                    <td><a href="yii-elasticsearch-elasticsearchtarget.html#getContextMessage()-detail">getContextMessage()</a></td>
+                    <td>If <a href="yii-elasticsearch-elasticsearchtarget.html#$includeContext-detail">$includeContext</a> property is false, returns context message normally.</td>
+                    <td><a href="yii-elasticsearch-elasticsearchtarget.html">yii\elasticsearch\ElasticsearchTarget</a></td>
+                </tr>
+                                                                </tbody></table>
+</div>
+
+<a id="events"></a>
+
+<a id="constants"></a>
+
+
+<h2>Property Details</h2>
+
+<div class="property-doc toggle-target-container">
+    <p><a href="#" class="toggle">Hide inherited properties</a></p>
+
+            <a class="dashAnchor" name="//apple_ref/intfp/%24%5FcontextMessage"></a><div id="$_contextMessage-detail">
+            <div class="detail-header h3">
+                <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+                <a class="tool-link hash" href="yii-elasticsearch-elasticsearchtarget.html#$_contextMessage-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                                    <a href="https://github.com/yiisoft/yii2-elasticsearch/edit/master/ElasticsearchTarget.php#L61" class="tool-link" title="edit on github">
+                        <span class="glyphicon glyphicon-pencil"></span>
+                    </a>
+                    <a href="https://github.com/yiisoft/yii2-elasticsearch/blob/master/ElasticsearchTarget.php#L61" class="tool-link" title="view source on github">
+                        <span class="glyphicon glyphicon-eye-open"></span>
+                    </a>
+                
+                $_contextMessage
+                <span class="detail-header-tag small">
+                    protected                                                                                property
+                                    </span>
+            </div>
+
+            
+            <div class="doc-description">
+                
+                <p>Context message cache (can be used multiple times if context is appended to every message)</p>
+                            </div>
+
+            <div class="signature"><span class="signature-defs">protected</span> <span class="signature-type"><a href="https://www.php.net/language.types.string">string</a></span> <a href="yii-elasticsearch-elasticsearchtarget.html#$_contextMessage-detail">$_contextMessage</a> <span style="color: #0000BB"></span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">null</span></div>
+            
+            
+        </div>
+            <a class="dashAnchor" name="//apple_ref/intfp/%24cacheContext"></a><div id="$cacheContext-detail">
+            <div class="detail-header h3">
+                <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+                <a class="tool-link hash" href="yii-elasticsearch-elasticsearchtarget.html#$cacheContext-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                                    <a href="https://github.com/yiisoft/yii2-elasticsearch/edit/master/ElasticsearchTarget.php#L56" class="tool-link" title="edit on github">
+                        <span class="glyphicon glyphicon-pencil"></span>
+                    </a>
+                    <a href="https://github.com/yiisoft/yii2-elasticsearch/blob/master/ElasticsearchTarget.php#L56" class="tool-link" title="view source on github">
+                        <span class="glyphicon glyphicon-eye-open"></span>
+                    </a>
+                
+                $cacheContext
+                <span class="detail-header-tag small">
+                    public                                                                                property
+                                    </span>
+            </div>
+
+            
+            <div class="doc-description">
+                
+                <p>If true, context message will cached once it's been created. Makes sense to use with <a href="yii-elasticsearch-elasticsearchtarget.html#$includeContext-detail">$includeContext</a>.</p>
+                            </div>
+
+            <div class="signature"><span class="signature-defs">public</span> <span class="signature-type"><a href="https://www.php.net/language.types.boolean">boolean</a></span> <a href="yii-elasticsearch-elasticsearchtarget.html#$cacheContext-detail">$cacheContext</a> <span style="color: #0000BB"></span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">false</span></div>
+            
+            
+        </div>
+            <a class="dashAnchor" name="//apple_ref/intfp/%24db"></a><div id="$db-detail">
+            <div class="detail-header h3">
+                <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+                <a class="tool-link hash" href="yii-elasticsearch-elasticsearchtarget.html#$db-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                                    <a href="https://github.com/yiisoft/yii2-elasticsearch/edit/master/ElasticsearchTarget.php#L39" class="tool-link" title="edit on github">
+                        <span class="glyphicon glyphicon-pencil"></span>
+                    </a>
+                    <a href="https://github.com/yiisoft/yii2-elasticsearch/blob/master/ElasticsearchTarget.php#L39" class="tool-link" title="view source on github">
+                        <span class="glyphicon glyphicon-eye-open"></span>
+                    </a>
+                
+                $db
+                <span class="detail-header-tag small">
+                    public                                                                                property
+                                    </span>
+            </div>
+
+            
+            <div class="doc-description">
+                
+                <p>The elasticsearch connection object or the application component ID
+of the elasticsearch connection.</p>
+                            </div>
+
+            <div class="signature"><span class="signature-defs">public</span> <span class="signature-type"><a href="yii-elasticsearch-connection.html">yii\elasticsearch\Connection</a>|<a href="https://www.php.net/language.types.array">array</a>|<a href="https://www.php.net/language.types.string">string</a></span> <a href="yii-elasticsearch-elasticsearchtarget.html#$db-detail">$db</a> <span style="color: #0000BB"></span><span style="color: #007700">=&nbsp;</span><span style="color: #DD0000">'elasticsearch'</span></div>
+            
+            
+        </div>
+            <a class="dashAnchor" name="//apple_ref/intfp/%24includeContext"></a><div id="$includeContext-detail">
+            <div class="detail-header h3">
+                <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+                <a class="tool-link hash" href="yii-elasticsearch-elasticsearchtarget.html#$includeContext-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                                    <a href="https://github.com/yiisoft/yii2-elasticsearch/edit/master/ElasticsearchTarget.php#L52" class="tool-link" title="edit on github">
+                        <span class="glyphicon glyphicon-pencil"></span>
+                    </a>
+                    <a href="https://github.com/yiisoft/yii2-elasticsearch/blob/master/ElasticsearchTarget.php#L52" class="tool-link" title="view source on github">
+                        <span class="glyphicon glyphicon-eye-open"></span>
+                    </a>
+                
+                $includeContext
+                <span class="detail-header-tag small">
+                    public                                                                                property
+                                    </span>
+            </div>
+
+            
+            <div class="doc-description">
+                
+                <p>If true, context will be included in every message.
+This is convenient if you log application errors and analyze them with tools like Kibana.</p>
+                            </div>
+
+            <div class="signature"><span class="signature-defs">public</span> <span class="signature-type"><a href="https://www.php.net/language.types.boolean">boolean</a></span> <a href="yii-elasticsearch-elasticsearchtarget.html#$includeContext-detail">$includeContext</a> <span style="color: #0000BB"></span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">false</span></div>
+            
+            
+        </div>
+            <a class="dashAnchor" name="//apple_ref/intfp/%24index"></a><div id="$index-detail">
+            <div class="detail-header h3">
+                <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+                <a class="tool-link hash" href="yii-elasticsearch-elasticsearchtarget.html#$index-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                                    <a href="https://github.com/yiisoft/yii2-elasticsearch/edit/master/ElasticsearchTarget.php#L30" class="tool-link" title="edit on github">
+                        <span class="glyphicon glyphicon-pencil"></span>
+                    </a>
+                    <a href="https://github.com/yiisoft/yii2-elasticsearch/blob/master/ElasticsearchTarget.php#L30" class="tool-link" title="view source on github">
+                        <span class="glyphicon glyphicon-eye-open"></span>
+                    </a>
+                
+                $index
+                <span class="detail-header-tag small">
+                    public                                                                                property
+                                    </span>
+            </div>
+
+            
+            <div class="doc-description">
+                
+                <p>Elasticsearch index name.</p>
+                            </div>
+
+            <div class="signature"><span class="signature-defs">public</span> <span class="signature-type"><a href="https://www.php.net/language.types.string">string</a></span> <a href="yii-elasticsearch-elasticsearchtarget.html#$index-detail">$index</a> <span style="color: #0000BB"></span><span style="color: #007700">=&nbsp;</span><span style="color: #DD0000">'yii'</span></div>
+            
+            
+        </div>
+            <a class="dashAnchor" name="//apple_ref/intfp/%24logContext"></a><div id="$logContext-detail">
+            <div class="detail-header h3">
+                <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+                <a class="tool-link hash" href="yii-elasticsearch-elasticsearchtarget.html#$logContext-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                                    <a href="https://github.com/yiisoft/yii2-elasticsearch/edit/master/ElasticsearchTarget.php#L47" class="tool-link" title="edit on github">
+                        <span class="glyphicon glyphicon-pencil"></span>
+                    </a>
+                    <a href="https://github.com/yiisoft/yii2-elasticsearch/blob/master/ElasticsearchTarget.php#L47" class="tool-link" title="view source on github">
+                        <span class="glyphicon glyphicon-eye-open"></span>
+                    </a>
+                
+                $logContext
+                <span class="detail-header-tag small">
+                    public                                                                                property
+                                    </span>
+            </div>
+
+            
+            <div class="doc-description">
+                
+                <p>If true, context will be logged as a separate message after all other messages.</p>
+                            </div>
+
+            <div class="signature"><span class="signature-defs">public</span> <span class="signature-type"><a href="https://www.php.net/language.types.boolean">boolean</a></span> <a href="yii-elasticsearch-elasticsearchtarget.html#$logContext-detail">$logContext</a> <span style="color: #0000BB"></span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">true</span></div>
+            
+            
+        </div>
+            <a class="dashAnchor" name="//apple_ref/intfp/%24options"></a><div id="$options-detail">
+            <div class="detail-header h3">
+                <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+                <a class="tool-link hash" href="yii-elasticsearch-elasticsearchtarget.html#$options-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                                    <a href="https://github.com/yiisoft/yii2-elasticsearch/edit/master/ElasticsearchTarget.php#L43" class="tool-link" title="edit on github">
+                        <span class="glyphicon glyphicon-pencil"></span>
+                    </a>
+                    <a href="https://github.com/yiisoft/yii2-elasticsearch/blob/master/ElasticsearchTarget.php#L43" class="tool-link" title="view source on github">
+                        <span class="glyphicon glyphicon-eye-open"></span>
+                    </a>
+                
+                $options
+                <span class="detail-header-tag small">
+                    public                                                                                property
+                                    </span>
+            </div>
+
+            
+            <div class="doc-description">
+                
+                <p>URL options.</p>
+                            </div>
+
+            <div class="signature"><span class="signature-defs">public</span> <span class="signature-type"><a href="https://www.php.net/language.types.array">array</a></span> <a href="yii-elasticsearch-elasticsearchtarget.html#$options-detail">$options</a> <span style="color: #0000BB"></span><span style="color: #007700">=&nbsp;[]</span></div>
+            
+            
+        </div>
+            <a class="dashAnchor" name="//apple_ref/intfp/%24type"></a><div id="$type-detail">
+            <div class="detail-header h3">
+                <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+                <a class="tool-link hash" href="yii-elasticsearch-elasticsearchtarget.html#$type-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                                    <a href="https://github.com/yiisoft/yii2-elasticsearch/edit/master/ElasticsearchTarget.php#L34" class="tool-link" title="edit on github">
+                        <span class="glyphicon glyphicon-pencil"></span>
+                    </a>
+                    <a href="https://github.com/yiisoft/yii2-elasticsearch/blob/master/ElasticsearchTarget.php#L34" class="tool-link" title="view source on github">
+                        <span class="glyphicon glyphicon-eye-open"></span>
+                    </a>
+                
+                $type
+                <span class="detail-header-tag small">
+                    public                                                                                property
+                                    </span>
+            </div>
+
+            
+            <div class="doc-description">
+                
+                <p>Elasticsearch type name.</p>
+                            </div>
+
+            <div class="signature"><span class="signature-defs">public</span> <span class="signature-type"><a href="https://www.php.net/language.types.string">string</a></span> <a href="yii-elasticsearch-elasticsearchtarget.html#$type-detail">$type</a> <span style="color: #0000BB"></span><span style="color: #007700">=&nbsp;</span><span style="color: #DD0000">'log'</span></div>
+            
+            
+        </div>
+    </div>
+
+<h2>Method Details</h2>
+
+<div class="method-doc toggle-target-container">
+    <p><a href="#" class="toggle">Hide inherited methods</a></p>
+
+            <a class="dashAnchor" name="//apple_ref/clm/collect%28%29"></a><div id="collect()-detail" class="">
+            <div class="detail-header h3">
+                <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+                <a class="tool-link hash" href="yii-elasticsearch-elasticsearchtarget.html#collect()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                                    <a href="https://github.com/yiisoft/yii2-elasticsearch/edit/master/ElasticsearchTarget.php#L108" class="tool-link" title="edit on github">
+                        <span class="glyphicon glyphicon-pencil"></span>
+                    </a>
+                    <a href="https://github.com/yiisoft/yii2-elasticsearch/blob/master/ElasticsearchTarget.php#L108" class="tool-link" title="view source on github">
+                        <span class="glyphicon glyphicon-eye-open"></span>
+                    </a>
+                
+                collect()
+
+                <span class="detail-header-tag small">
+                    public                                                            method
+                                    </span>
+            </div>
+
+            
+            <div class="doc-description">
+                
+                <p><strong>Processes the given log messages.</strong></p>
+                <p>This method will filter the given messages with <span class="broken-link">levels</span> and <span class="broken-link">categories</span>.
+And if requested, it will also export the filtering result to specific medium (e.g. email).
+Depending on the <a href="yii-elasticsearch-elasticsearchtarget.html#$includeContext-detail">$includeContext</a> attribute, a context message will be either created or ignored.</p>
+                            </div>
+
+            <table class="detail-table table table-striped table-bordered table-hover">
+                <tbody><tr><td colspan="3" class="signature"><span class="signature-defs">public</span> <span class="signature-type">void</span> <strong><a href="yii-elasticsearch-elasticsearchtarget.html#collect()-detail">collect</a></strong> ( <span style="color: #0000BB">$messages</span>, <span style="color: #0000BB">$final</span> )</td></tr>
+
+                                                            <tr>
+                            <td class="param-name-col"><span style="color: #0000BB">$messages</span></td>
+                            <td class="param-type-col"><a href="https://www.php.net/language.types.array">array</a></td>
+                            <td class="param-desc-col">
+                               <p>Log messages to be processed. See <span class="broken-link">Logger::messages</span> for the structure
+of each message.</p>
+                            </td>
+                        </tr>
+                                            <tr>
+                            <td class="param-name-col"><span style="color: #0000BB">$final</span></td>
+                            <td class="param-type-col"><a href="https://www.php.net/language.types.boolean">boolean</a></td>
+                            <td class="param-desc-col">
+                               <p>Whether this method is called at the end of the current application</p>
+                            </td>
+                        </tr>
+                    
+                    
+                                                </tbody></table>
+
+            
+            
+
+    <p>
+        <a class="btn btn-link" data-toggle="collapse" data-target="#collapseCollect" role="button" aria-expanded="false" aria-controls="collapseCollect">
+            Source code
+        </a>
+    </p>
+    <div class="collapse" id="collapseCollect">
+        <div class="card card-body">
+            <pre>                <code class="hljs php language-php"><span class="hljs-keyword">public</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">collect</span><span class="hljs-params">($messages, $final)</span>
+</span>{
+    <span class="hljs-keyword">$this</span>-&gt;messages = array_merge(<span class="hljs-keyword">$this</span>-&gt;messages, <span class="hljs-keyword">static</span>::filterMessages($messages, <span class="hljs-keyword">$this</span>-&gt;getLevels(), <span class="hljs-keyword">$this</span>-&gt;categories, <span class="hljs-keyword">$this</span>-&gt;except));
+    $count = count(<span class="hljs-keyword">$this</span>-&gt;messages);
+    <span class="hljs-keyword">if</span> ($count &gt; <span class="hljs-number">0</span> &amp;&amp; ($final || <span class="hljs-keyword">$this</span>-&gt;exportInterval &gt; <span class="hljs-number">0</span> &amp;&amp; $count &gt;= <span class="hljs-keyword">$this</span>-&gt;exportInterval)) {
+        <span class="hljs-keyword">if</span> (!<span class="hljs-keyword">$this</span>-&gt;includeContext &amp;&amp; <span class="hljs-keyword">$this</span>-&gt;logContext) {
+            $context = <span class="hljs-keyword">$this</span>-&gt;getContextMessage();
+            <span class="hljs-keyword">if</span> (!<span class="hljs-keyword">empty</span>($context)) {
+                <span class="hljs-keyword">$this</span>-&gt;messages[] = [$context, Logger::LEVEL_INFO, <span class="hljs-string">'application'</span>, YII_BEGIN_TIME];
+            }
+        }
+        <span class="hljs-comment">// set exportInterval to 0 to avoid triggering export again while exporting</span>
+        $oldExportInterval = <span class="hljs-keyword">$this</span>-&gt;exportInterval;
+        <span class="hljs-keyword">$this</span>-&gt;exportInterval = <span class="hljs-number">0</span>;
+        <span class="hljs-keyword">$this</span>-&gt;export();
+        <span class="hljs-keyword">$this</span>-&gt;exportInterval = $oldExportInterval;
+        <span class="hljs-keyword">$this</span>-&gt;messages = [];
+    }
+}
+</code>
+            </pre>
+        </div>
+    </div>
+            
+        </div>
+            <a class="dashAnchor" name="//apple_ref/clm/export%28%29"></a><div id="export()-detail" class="">
+            <div class="detail-header h3">
+                <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+                <a class="tool-link hash" href="yii-elasticsearch-elasticsearchtarget.html#export()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                                    <a href="https://github.com/yiisoft/yii2-elasticsearch/edit/master/ElasticsearchTarget.php#L77" class="tool-link" title="edit on github">
+                        <span class="glyphicon glyphicon-pencil"></span>
+                    </a>
+                    <a href="https://github.com/yiisoft/yii2-elasticsearch/blob/master/ElasticsearchTarget.php#L77" class="tool-link" title="view source on github">
+                        <span class="glyphicon glyphicon-eye-open"></span>
+                    </a>
+                
+                export()
+
+                <span class="detail-header-tag small">
+                    public                                                            method
+                                    </span>
+            </div>
+
+            
+            <div class="doc-description">
+                
+                <p><strong></strong></p>
+                                            </div>
+
+            <table class="detail-table table table-striped table-bordered table-hover">
+                <tbody><tr><td colspan="3" class="signature"><span class="signature-defs">public</span> <span class="signature-type">void</span> <strong><a href="yii-elasticsearch-elasticsearchtarget.html#export()-detail">export</a></strong> ( )</td></tr>
+
+                            </tbody></table>
+
+            
+            
+
+    <p>
+        <a class="btn btn-link" data-toggle="collapse" data-target="#collapseExport" role="button" aria-expanded="false" aria-controls="collapseExport">
+            Source code
+        </a>
+    </p>
+    <div class="collapse" id="collapseExport">
+        <div class="card card-body">
+            <pre>                <code class="hljs php language-php"><span class="hljs-keyword">public</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">export</span><span class="hljs-params">()</span>
+</span>{
+    $messages = array_map([<span class="hljs-keyword">$this</span>, <span class="hljs-string">'prepareMessage'</span>], <span class="hljs-keyword">$this</span>-&gt;messages);
+    $body = implode(<span class="hljs-string">"\n"</span>, $messages) . <span class="hljs-string">"\n"</span>;
+    <span class="hljs-keyword">$this</span>-&gt;db-&gt;post([<span class="hljs-keyword">$this</span>-&gt;index, <span class="hljs-keyword">$this</span>-&gt;type, <span class="hljs-string">'_bulk'</span>], <span class="hljs-keyword">$this</span>-&gt;options, $body);
+}
+</code>
+            </pre>
+        </div>
+    </div>
+            
+        </div>
+            <a class="dashAnchor" name="//apple_ref/clm/getContextMessage%28%29"></a><div id="getContextMessage()-detail" class="">
+            <div class="detail-header h3">
+                <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+                <a class="tool-link hash" href="yii-elasticsearch-elasticsearchtarget.html#getContextMessage()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                                    <a href="https://github.com/yiisoft/yii2-elasticsearch/edit/master/ElasticsearchTarget.php#L90" class="tool-link" title="edit on github">
+                        <span class="glyphicon glyphicon-pencil"></span>
+                    </a>
+                    <a href="https://github.com/yiisoft/yii2-elasticsearch/blob/master/ElasticsearchTarget.php#L90" class="tool-link" title="view source on github">
+                        <span class="glyphicon glyphicon-eye-open"></span>
+                    </a>
+                
+                getContextMessage()
+
+                <span class="detail-header-tag small">
+                    protected                                                            method
+                                    </span>
+            </div>
+
+            
+            <div class="doc-description">
+                
+                <p><strong>If <a href="yii-elasticsearch-elasticsearchtarget.html#$includeContext-detail">$includeContext</a> property is false, returns context message normally.</strong></p>
+                <p>If <a href="yii-elasticsearch-elasticsearchtarget.html#$includeContext-detail">$includeContext</a> is true, returns an empty string (so that context message in <a href="yii-elasticsearch-elasticsearchtarget.html#collect()-detail">collect()</a> is not generated),
+expecting that context will be appended to every message in <a href="yii-elasticsearch-elasticsearchtarget.html#prepareMessage()-detail">prepareMessage()</a>.</p>
+                            </div>
+
+            <table class="detail-table table table-striped table-bordered table-hover">
+                <tbody><tr><td colspan="3" class="signature"><span class="signature-defs">protected</span> <span class="signature-type"><a href="https://www.php.net/language.types.array">array</a></span> <strong><a href="yii-elasticsearch-elasticsearchtarget.html#getContextMessage()-detail">getContextMessage</a></strong> ( )</td></tr>
+
+                                    
+                                            <tr>
+                            <th class="param-name-col">return</th>
+                            <td class="param-type-col"><a href="https://www.php.net/language.types.array">array</a></td>
+                            <td class="param-desc-col">
+                                <p>The context information</p>
+                            </td>
+                        </tr>
+                    
+                                                </tbody></table>
+
+            
+            
+
+    <p>
+        <a class="btn btn-link" data-toggle="collapse" data-target="#collapseGetContextMessage" role="button" aria-expanded="false" aria-controls="collapseGetContextMessage">
+            Source code
+        </a>
+    </p>
+    <div class="collapse" id="collapseGetContextMessage">
+        <div class="card card-body">
+            <pre>                <code class="hljs php language-php"><span class="hljs-keyword">protected</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">getContextMessage</span><span class="hljs-params">()</span>
+</span>{
+    <span class="hljs-keyword">if</span> (<span class="hljs-keyword">null</span> === <span class="hljs-keyword">$this</span>-&gt;_contextMessage || !<span class="hljs-keyword">$this</span>-&gt;cacheContext) {
+        <span class="hljs-keyword">$this</span>-&gt;_contextMessage = ArrayHelper::filter($GLOBALS, <span class="hljs-keyword">$this</span>-&gt;logVars);
+    }
+    <span class="hljs-keyword">return</span> <span class="hljs-keyword">$this</span>-&gt;_contextMessage;
+}
+</code>
+            </pre>
+        </div>
+    </div>
+            
+        </div>
+            <a class="dashAnchor" name="//apple_ref/clm/init%28%29"></a><div id="init()-detail" class="">
+            <div class="detail-header h3">
+                <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+                <a class="tool-link hash" href="yii-elasticsearch-elasticsearchtarget.html#init()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                                    <a href="https://github.com/yiisoft/yii2-elasticsearch/edit/master/ElasticsearchTarget.php#L68" class="tool-link" title="edit on github">
+                        <span class="glyphicon glyphicon-pencil"></span>
+                    </a>
+                    <a href="https://github.com/yiisoft/yii2-elasticsearch/blob/master/ElasticsearchTarget.php#L68" class="tool-link" title="view source on github">
+                        <span class="glyphicon glyphicon-eye-open"></span>
+                    </a>
+                
+                init()
+
+                <span class="detail-header-tag small">
+                    public                                                            method
+                                    </span>
+            </div>
+
+            
+            <div class="doc-description">
+                
+                <p><strong>This method will initialize the <span class="broken-link">elasticsearch</span> property to make sure it refers to a valid Elasticsearch connection.</strong></p>
+                                            </div>
+
+            <table class="detail-table table table-striped table-bordered table-hover">
+                <tbody><tr><td colspan="3" class="signature"><span class="signature-defs">public</span> <span class="signature-type">void</span> <strong><a href="yii-elasticsearch-elasticsearchtarget.html#init()-detail">init</a></strong> ( )</td></tr>
+
+                                    
+                    
+                                            <tr>
+                            <th class="param-name-col">throws</th>
+                            <td class="param-type-col">\yii\base\InvalidConfigException</td>
+                            <td class="param-desc-col">
+                                <p>if <span class="broken-link">elasticsearch</span> is invalid.</p>
+                            </td>
+                        </tr>
+                                                </tbody></table>
+
+            
+            
+
+    <p>
+        <a class="btn btn-link" data-toggle="collapse" data-target="#collapseInit" role="button" aria-expanded="false" aria-controls="collapseInit">
+            Source code
+        </a>
+    </p>
+    <div class="collapse" id="collapseInit">
+        <div class="card card-body">
+            <pre>                <code class="hljs php language-php"><span class="hljs-keyword">public</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">init</span><span class="hljs-params">()</span>
+</span>{
+    <span class="hljs-keyword">parent</span>::init();
+    <span class="hljs-keyword">$this</span>-&gt;db = Instance::ensure(<span class="hljs-keyword">$this</span>-&gt;db, Connection::className());
+}
+</code>
+            </pre>
+        </div>
+    </div>
+            
+        </div>
+            <a class="dashAnchor" name="//apple_ref/clm/prepareMessage%28%29"></a><div id="prepareMessage()-detail" class="">
+            <div class="detail-header h3">
+                <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+                <a class="tool-link hash" href="yii-elasticsearch-elasticsearchtarget.html#prepareMessage()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                                    <a href="https://github.com/yiisoft/yii2-elasticsearch/edit/master/ElasticsearchTarget.php#L135" class="tool-link" title="edit on github">
+                        <span class="glyphicon glyphicon-pencil"></span>
+                    </a>
+                    <a href="https://github.com/yiisoft/yii2-elasticsearch/blob/master/ElasticsearchTarget.php#L135" class="tool-link" title="view source on github">
+                        <span class="glyphicon glyphicon-eye-open"></span>
+                    </a>
+                
+                prepareMessage()
+
+                <span class="detail-header-tag small">
+                    public                                                            method
+                                    </span>
+            </div>
+
+            
+            <div class="doc-description">
+                
+                <p><strong>Prepares a log message.</strong></p>
+                                            </div>
+
+            <table class="detail-table table table-striped table-bordered table-hover">
+                <tbody><tr><td colspan="3" class="signature"><span class="signature-defs">public</span> <span class="signature-type"><a href="https://www.php.net/language.types.string">string</a></span> <strong><a href="yii-elasticsearch-elasticsearchtarget.html#prepareMessage()-detail">prepareMessage</a></strong> ( <span style="color: #0000BB">$message</span> )</td></tr>
+
+                                                            <tr>
+                            <td class="param-name-col"><span style="color: #0000BB">$message</span></td>
+                            <td class="param-type-col"><a href="https://www.php.net/language.types.array">array</a></td>
+                            <td class="param-desc-col">
+                               <p>The log message to be formatted.</p>
+                            </td>
+                        </tr>
+                    
+                    
+                                                </tbody></table>
+
+            
+            
+
+    <p>
+        <a class="btn btn-link" data-toggle="collapse" data-target="#collapsePrepareMessage" role="button" aria-expanded="false" aria-controls="collapsePrepareMessage">
+            Source code
+        </a>
+    </p>
+    <div class="collapse" id="collapsePrepareMessage">
+        <div class="card card-body">
+            <pre>                <code class="hljs php language-php"><span class="hljs-keyword">public</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">prepareMessage</span><span class="hljs-params">($message)</span>
+</span>{
+    <span class="hljs-keyword">list</span>($text, $level, $category, $timestamp) = $message;
+    $result = [
+        <span class="hljs-string">'category'</span> =&gt; $category,
+        <span class="hljs-string">'level'</span> =&gt; Logger::getLevelName($level),
+        <span class="hljs-string">'@timestamp'</span> =&gt; date(<span class="hljs-string">'c'</span>, $timestamp),
+    ];
+    <span class="hljs-keyword">if</span> (<span class="hljs-keyword">isset</span>($message[<span class="hljs-number">4</span>])) {
+        $result[<span class="hljs-string">'trace'</span>] = $message[<span class="hljs-number">4</span>];
+    }
+    <span class="hljs-comment">//Exceptions get parsed into an array, text and arrays are passed as is, other types are var_dumped</span>
+    <span class="hljs-keyword">if</span> ($text <span class="hljs-keyword">instanceof</span> \<span class="hljs-keyword">Exception</span>) {
+        <span class="hljs-comment">//convert exception to array for easier analysis</span>
+        $result[<span class="hljs-string">'message'</span>] = [
+            <span class="hljs-string">'message'</span> =&gt; $text-&gt;getMessage(),
+            <span class="hljs-string">'file'</span> =&gt; $text-&gt;getFile(),
+            <span class="hljs-string">'line'</span> =&gt; $text-&gt;getLine(),
+            <span class="hljs-string">'trace'</span> =&gt; $text-&gt;getTraceAsString(),
+        ];
+    } <span class="hljs-keyword">elseif</span> (is_array($text) || is_string($text)) {
+        $result[<span class="hljs-string">'message'</span>] = $text;
+    } <span class="hljs-keyword">else</span> {
+        $result[<span class="hljs-string">'message'</span>] = VarDumper::export($text);
+    }
+    <span class="hljs-keyword">if</span> (<span class="hljs-keyword">$this</span>-&gt;includeContext) {
+        $result[<span class="hljs-string">'context'</span>] = <span class="hljs-keyword">$this</span>-&gt;getContextMessage();
+    }
+    $message = implode(<span class="hljs-string">"\n"</span>, [
+        Json::encode([
+            <span class="hljs-string">'index'</span> =&gt; <span class="hljs-keyword">new</span> \stdClass()
+        ]),
+        Json::encode($result)
+    ]);
+    <span class="hljs-keyword">return</span> $message;
+}
+</code>
+            </pre>
+        </div>
+    </div>
+            
+        </div>
+    </div>
+            </div>
+    </div>
+</div>
+</div>
+
+
+            <div class="footer-wrapper">
+    <footer>
+        <div class="container">
+            <div class="footer-inner">
+                <div class="row">
+                    <div class="col-md-2 col-sm-4 hidden-xs">
+                        <ul class="footerList">
+  <li class="footerList_item">
+    <div>About</div>
+  </li>
+  <li class="footerList_item">
+    <a href="../../../../../../doc/guide/2.0/en/intro-yii.html">About Yii</a>  </li>
+  <li class="footerList_item">
+    <a href="https://www.yiiframework.com/news">News</a>  </li>
+  <li class="footerList_item">
+    <a href="https://www.yiiframework.com/license">License</a>  </li>
+  <li class="footerList_item">
+    <a href="https://www.yiiframework.com/contact">Contact Us</a>  </li>
+</ul>
+                    </div>
+                    <div class="col-md-2 col-sm-4 hidden-xs">
+                        <ul class="footerList">
+  <li class="footerList_item">
+    <div>Downloads</div>
+  </li>
+  <li class="footerList_item">
+    <a href="https://www.yiiframework.com/download">Framework</a>  </li>
+  <li class="footerList_item">
+    <a href="https://www.yiiframework.com/download#offline-documentation">Documentation</a>  </li>
+  <li class="footerList_item">
+    <a href="https://www.yiiframework.com/extensions">Extensions</a>  </li>
+  <li class="footerList_item">
+    <a href="https://www.yiiframework.com/logo">Logo</a>  </li>
+</ul>
+                    </div>
+                    <div class="col-md-2 col-sm-4 hidden-xs">
+                        <ul class="footerList">
+  <li class="footerList_item">
+    <div>Documentation</div>
+  </li>
+  <li class="footerList_item">
+    <a href="../../../../../../doc/guide/2.0/en.html">Guide</a>  </li>
+  <li class="footerList_item">
+    <a href="../../../../../../doc/api/2.html">API</a>  </li>
+  <li class="footerList_item">
+    <a href="https://www.yiiframework.com/wiki">Wiki</a>  </li>
+  <li class="footerList_item">
+    <a href="https://www.yiiframework.com/resources">Resources</a>  </li>
+</ul>
+                    </div>
+                    <div class="col-md-2 col-sm-4 hidden-xs">
+                        <ul class="footerList">
+  <li class="footerList_item">
+    <div>Development</div>
+  </li>
+  <li class="footerList_item">
+    <a href="https://www.yiiframework.com/contribute">Contribute</a>  </li>
+  <li class="footerList_item">
+    <a href="https://github.com/yiisoft/yii2/commits/master" rel="noopener noreferrer" target="_blank">Latest Updates</a>  </li>
+  <li class="footerList_item">
+    <a href="https://www.yiiframework.com/report-issue">Report a Bug</a>  </li>
+  <li class="footerList_item">
+    <a href="https://www.yiiframework.com/security">Report Security Issue</a>  </li>
+</ul>
+                    </div>
+                    <div class="col-md-2 col-sm-4 hidden-xs">
+                        <ul class="footerList">
+    <li class="footerList_item">
+        <div>Community</div>
+    </li>
+    <li class="footerList_item">
+        <a href="https://www.yiiframework.com/forum">Forum</a>    </li>
+    <li class="footerList_item">
+        <a href="https://www.yiiframework.com/chat">Live Chat</a>    </li>
+    <li class="footerList_item">
+        <a href="https://www.facebook.com/groups/yiitalk/" target="_blank" rel="noopener noreferrer">Facebook Group</a>
+    </li>
+    <li class="footerList_item">
+        <a href="https://www.yiiframework.com/user/halloffame">Hall of Fame</a>    </li>
+    <li class="footerList_item">
+        <a href="https://www.yiiframework.com/badges">Badges</a>    </li>
+</ul>
+                    </div>
+                    <div class="col-md-2 col-sm-4 hidden-xs">
+                        <ul class="footerList">
+  <li class="footerList_item">
+      <span class="social">
+          <a href="https://github.com/yiisoft" aria-label="GitHub Account" target="_blank" rel="noopener noreferrer"><i class="fa fa-github"></i></a>
+          <a href="https://twitter.com/yiiframework" aria-label="Twitter Account" target="_blank" rel="noopener noreferrer"><i class="fa fa-twitter"></i></a>
+          <a href="https://www.facebook.com/groups/yiitalk/" aria-label="Facebook Group" target="_blank" rel="noopener noreferrer"><i class="fa fa-facebook"></i></a>
+          <a href="https://www.yiiframework.com/rss.xml" aria-label="RSS Feed"><i class="fa fa-rss"></i></a>      </span>
+  </li>
+  <li class="footerList_item">
+    <a href="https://www.yiiframework.com/tos">Terms of service</a>  </li>
+  <li class="footerList_item">
+      <a href="https://www.yiiframework.com/license">License</a>  </li>
+  <li class="footerList_item">
+      <a href="https://github.com/yiisoft-contrib/yiiframework.com" target="_blank" rel="noopener noreferrer">Website Source Code</a>
+  </li>
+  <li class="footerList_item">
+      &nbsp;
+  </li>
+  <li class="footerList_item">
+    © 2008 - 2022 Yii
+  </li>
+  <li class="footerList_item">
+      Design: <a href="https://www.eshill.ru/" target="_blank" rel="noopener noreferrer">Eshill</a>
+  </li>
+</ul>
+                    </div>
+                    <div class="col-xs-12 hidden-sm hidden-md hidden-lg">
+                        <div class="center-block">
+                            <div>
+                                <ul class="footerList">
+  <li class="footerList_item">
+      <span class="social">
+          <a href="https://github.com/yiisoft" aria-label="GitHub Account" target="_blank" rel="noopener noreferrer"><i class="fa fa-github"></i></a>
+          <a href="https://twitter.com/yiiframework" aria-label="Twitter Account" target="_blank" rel="noopener noreferrer"><i class="fa fa-twitter"></i></a>
+          <a href="https://www.facebook.com/groups/yiitalk/" aria-label="Facebook Group" target="_blank" rel="noopener noreferrer"><i class="fa fa-facebook"></i></a>
+          <a href="https://www.yiiframework.com/rss.xml" aria-label="RSS Feed"><i class="fa fa-rss"></i></a>      </span>
+  </li>
+  <li class="footerList_item">
+    <a href="https://www.yiiframework.com/tos">Terms of service</a>  </li>
+  <li class="footerList_item">
+      <a href="https://www.yiiframework.com/license">License</a>  </li>
+  <li class="footerList_item">
+      <a href="https://github.com/yiisoft-contrib/yiiframework.com" target="_blank" rel="noopener noreferrer">Website Source Code</a>
+  </li>
+  <li class="footerList_item">
+      &nbsp;
+  </li>
+  <li class="footerList_item">
+    © 2008 - 2022 Yii
+  </li>
+  <li class="footerList_item">
+      Design: <a href="https://www.eshill.ru/" target="_blank" rel="noopener noreferrer">Eshill</a>
+  </li>
+</ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 text-center">
+                        <ul class="footerList">
+    <li class="footerList_item">
+        <div>Supported by</div>
+    </li>
+    <li class="footerList_item">
+            <a href="https://opencollective.com/yiisoft" aria-label="OpenCollective" target="_blank" rel="noopener
+            noreferrer"><img alt="OpenCollective" height="40" src="../../../../../../image/collective.png"></a>
+    </li>
+    <li class="footerList_item">
+        <a href="https://www.jetbrains.com/?from=yii" aria-label="JetBrains website" target="_blank" rel="noopener
+        noreferrer"><img alt="JetBrains logo" width="80" src="../../../../../../image/jetbrains.svg"></a>
+    </li>
+</ul>
+
+
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</div>
+
+        </div> <!-- close the id="page-wrapper" -->
+
+        <script src="../../../../../../assets/84e61ab0/js/all.mina079.js?v=1664835330"></script>
+<script>jQuery(function ($) {
+
+    $("[data-toggle='offcanvas']").click(function () {
+      $('.row-offcanvas').toggleClass('active')
+    });
+
+    $('.has-children.active + div').addClass('active-parent');
+
+
+$('.api-content a.toggle').on('click', function () {
+    var $this = $(this);
+    if ($this.hasClass('properties-hidden')) {
+        $this.text($this.text().replace(/Show/,'Hide'));
+        $this.parents('.toggle-target-container').find('.inherited').show();
+        $this.removeClass('properties-hidden');
+    } else {
+        $this.text($this.text().replace(/Hide/,'Show'));
+        $this.parents('.toggle-target-container').find('.inherited').hide();
+        $this.addClass('properties-hidden');
+    }
+
+    return false;
+});
+
+
+});</script>    
+
+<!-- Mirrored from www.yiiframework.com/extension/yiisoft/yii2-elasticsearch/doc/api/2.0/yii-elasticsearch-elasticsearchtarget by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 07 Dec 2022 15:05:42 GMT -->
+
+</body></html>
